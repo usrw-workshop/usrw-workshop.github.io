@@ -1,5 +1,5 @@
 const CONFIG = {
-  contactEmail: "TBD",
+  contactEmail: "usrw2026@googlegroups.com",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
