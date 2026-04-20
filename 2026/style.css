@@ -171,17 +171,7 @@ ul.advisory li {
   padding: 0.3rem 0;
 }
 
-/* === CFP-specific (cfp-draft page) === */
-.draft-banner {
-  background: #fef3c7;
-  border: 1px solid #f59e0b;
-  color: #92400e;
-  padding: 0.75rem 1.5rem;
-  text-align: center;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
+/* === CfP highlight box === */
 .cfp-highlight {
   background: var(--color-accent-light);
   border-left: 4px solid var(--color-accent);

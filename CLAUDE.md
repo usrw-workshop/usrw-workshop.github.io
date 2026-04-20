@@ -25,10 +25,9 @@ The site is hosted on GitHub Pages at `usrw-workshop.github.io`. Each workshop e
 ```
 index.html              → redirect to /2026/
 2026/
-  index.html            → main workshop page
+  index.html            → main workshop page (includes Call for Papers)
   style.css             → styles
-  config.js             → shared config (contact email, etc.)
-  cfp-draft.html        → call for papers (draft, noindex)
+  config.js             → shared config (contact email, topics, dates, organizers)
 ```
 
 Future editions (e.g., 2027) get their own subfolder.
