@@ -22,7 +22,13 @@ const DATA = {
     { text: "Community resources", detail: "shared benchmarks/datasets for joint IR-Rec tasks; reproducible baselines and open challenges" },
   ],
   importantDates: [
-    { label: "Paper submission deadline", date: "July 20, 2026", emphasis: true },
+    {
+      label: "Paper submission deadline",
+      previousDate: "July 20, 2026",
+      date: "July 27, 2026",
+      emphasis: true,
+      extended: true,
+    },
     { label: "Reviewer deadline", date: "August 7, 2026", emphasis: false },
     { label: "Author notification", date: "August 14, 2026", emphasis: true },
     { label: "Camera-ready deadline", date: "August 28, 2026", emphasis: false },
@@ -57,6 +63,20 @@ const RENDERERS = {
       const label = document.createElement("td");
       label.textContent = d.label;
       const date = document.createElement("td");
+      if (d.extended) {
+        tr.className = "date-extended";
+        const badge = document.createElement("span");
+        badge.className = "date-extended-badge";
+        badge.textContent = "Deadline extended";
+        label.appendChild(document.createElement("br"));
+        label.appendChild(badge);
+
+        const previousDate = document.createElement("del");
+        previousDate.className = "date-previous";
+        previousDate.textContent = d.previousDate;
+        date.appendChild(previousDate);
+        date.appendChild(document.createElement("br"));
+      }
       if (d.emphasis) {
         const strong = document.createElement("strong");
         strong.textContent = d.date;

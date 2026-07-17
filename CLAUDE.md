@@ -13,7 +13,7 @@ The workshop bridges the Information Retrieval (IR) and Recommender Systems (Rec
 - **April 14, 2026:** Website URL and workshop blurb due to conference organizers
 - **April 17, 2026:** CfP draft due to workshop chairs for approval
 - **April 21, 2026:** CfP publication (after confirmation)
-- **July 20, 2026:** Paper submission deadline; camera-ready workshop summary for main proceedings
+- **July 27, 2026:** Paper submission deadline; camera-ready workshop summary for main proceedings
 - **August 7, 2026:** Reviewer deadline
 - **August 14, 2026:** Author notification
 - **August 28, 2026:** Camera-ready paper deadline
