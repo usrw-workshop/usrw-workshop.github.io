@@ -1,0 +1,336 @@
+[
+  {
+    "id": 200,
+    "title": "A Unified Framework for Evaluating Systems that Allocate Visibility Algorithmically",
+    "authors": [
+      {
+        "name": "Stefania Ionescu",
+        "affiliation": "ETH Zurich"
+      },
+      {
+        "name": "Robin Forsberg",
+        "affiliation": "University of Helsinki"
+      },
+      {
+        "name": "Elsa Maria Lichtenegger",
+        "affiliation": "University of Zurich"
+      },
+      {
+        "name": "Salima Jaoua",
+        "affiliation": "University of Zurich"
+      },
+      {
+        "name": "Kshitijaa Jaglan",
+        "affiliation": "University of Zurich"
+      },
+      {
+        "name": "Florian Dörfler",
+        "affiliation": "ETH Zurich"
+      },
+      {
+        "name": "Anikó Hannák",
+        "affiliation": "University of Zurich"
+      }
+    ],
+    "abstract": "Throughout application domains, we now rely extensively on algorithmic systems to engage with ever-expanding datasets of information. Despite their benefits, these systems are often complex (comprising of many intricate tools, e.g., search, recommender systems, prediction models), of unknown structure (due to the lack of accompanying documentation), and having hard-to-predict yet potentially severe downstream consequences (due to the extensive use, systematic enactment of existing errors, and many comprising feedback loops). As such, understanding and evaluating these systems as a whole remains a challenge for both researchers and legislators. To aid ongoing efforts, we first introduce the term \\emph{visibility allocation system} (VAS) as a way of referring to (semi-)automated systems deciding which (processed) data to present a human user with. Next, we review typical tools comprising VASs, such as search and recommender systems, and define the associated computational problems they solve. By doing so, VASs can be decomposed into sub-processes and illustrated via data flow diagrams. Moreover, we survey metrics for evaluating VASs throughout the pipeline, thus aiding system diagnostics. Using forecasting-based recommendations in school choice as a case study, we demonstrate how our framework can support VAS evaluation. We also discuss how our framework can support ongoing AI-legislative efforts to locate obligations, quantify systemic risks, and enable adaptive compliance. Altogether, this work defines VASs and unifies the language for its different components, ultimately reducing the friction of information transfer across research domains and aligning evaluation.",
+    "session": "Poster",
+    "pdf": "https://usrw-workshop.github.io/2026/papers/200-a-unified-framework-for-evaluating-systems-that-allocate-visibility-algorithmically.pdf"
+  },
+  {
+    "id": 187,
+    "title": "Dear Algo: A Precision-First Agentic Intent Layer for Unified Search and Recommendation",
+    "authors": [
+      {
+        "name": "Rui Wang",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Jiazhou Wang",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Zheng Wei",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Chenglin Lu",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Fangcheng Sun",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Ivy Sun",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Jin Sun",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Hui Geng",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Lillian Zhang",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Chao Yang",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Lei Chen",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Shahin Sefati",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Reem Helou",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Joe Zhou",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Babak Shakibi",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Yiyi Pan",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Bi Xue",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Hong Yan",
+        "affiliation": "Google DeepMind"
+      },
+      {
+        "name": "Shujian Bu",
+        "affiliation": "Meta"
+      }
+    ],
+    "abstract": "Search and recommendation serve a shared discovery objective but encode intent differently. We study this boundary through Dear Algo on Threads, a deployed product where open-ended requests such as \\emph{more NBA news} or \\emph{less politics} steer subsequent feed recommendations rather than return a one-shot result list. Its agentic intent layer compiles explicit, inferred, negative, and compound intent into a grounded executable plan, then invokes conventional retrieval and optional semantic or multimodal reranking. The layer shares an intent-to-retrieval contract without requiring one model or serving path across search-like and recommendation-like modes. We evaluate Dear Algo under a precision-first objective. In a blinded audit of 300 public request-item pairs (296 evaluable), a strict categorical LLM-as-a-judge gate achieved 94.4% exact-Relevant precision [88.8%, 98.9%]. Across 72 normalized request clusters, the full configuration produced 7.73 judge-qualified candidates per 20 slots versus 6.61 for an LLM-derived-query baseline, a gain of 1.11 [0.12, 2.12]. In a candidate-randomized serving-path study restricted to the reranker path's first 72 eligible hours, the user-weighted judge-Irrelevant share among judged admissions was 2.80% versus 4.78% off (-1.97 points [-3.02, -0.94]), while Exact-Relevant share was 2.24 points higher [0.08, 4.41]. Together, these studies show how explicit natural-language intent can be carried into feed recommendation under a precision-first evaluation framework.",
+    "session": "Poster",
+    "pdf": "https://usrw-workshop.github.io/2026/papers/187-dear-algo-a-precision-first-agentic-intent-layer-for-unified-search-and-recommendation.pdf"
+  },
+  {
+    "id": 62,
+    "title": "From IR to RecSys: Evaluating LLM-based Judges in Cranfield-style Recommendation Collections",
+    "authors": [
+      {
+        "name": "Gustavo Penha",
+        "affiliation": "Spotify"
+      },
+      {
+        "name": "Aleksandr V. Petrov",
+        "affiliation": "Spotify"
+      },
+      {
+        "name": "Claudia Hauff",
+        "affiliation": "Spotify"
+      },
+      {
+        "name": "Enrico Palumbo",
+        "affiliation": "Spotify"
+      },
+      {
+        "name": "Ali Vardasbi",
+        "affiliation": "Spotify"
+      },
+      {
+        "name": "Edoardo D'Amico",
+        "affiliation": "Spotify"
+      },
+      {
+        "name": "Francesco Fabbri",
+        "affiliation": "Spotify"
+      },
+      {
+        "name": "Alice Wang",
+        "affiliation": "Spotify"
+      },
+      {
+        "name": "Praveen Chandar",
+        "affiliation": "Spotify"
+      },
+      {
+        "name": "Henrik Lindström",
+        "affiliation": "Spotify"
+      },
+      {
+        "name": "Hugues Bouchard",
+        "affiliation": "Spotify"
+      },
+      {
+        "name": "Mounia Lalmas",
+        "affiliation": "Spotify"
+      }
+    ],
+    "abstract": "The Cranfield paradigm has long provided reliable, reproducible evaluation in ad hoc retrieval, and recent work has begun extending this framework to recommender systems. A recent development in IR is the use of Large Language Models (LLMs) as automatic relevance judges, showing promising agreement with human assessors. Whether this LLM-judge paradigm---studied predominantly on query--document pairs---transfers to the subjective, profile-driven nature of recommendation remains an open question. This paper bridges the IR and RecSys evaluation traditions by systematically investigating LLM-based judges within a Cranfield-style recommendation collection. Using the ML-32M-ext movie recommendation collection, we first demonstrate that traditional train--test splits yield substantially incomplete relevance labels and unreliable system rankings compared to Cranfield-style pooling. We then assess LLM-judge alignment with human labels, finding that richer item metadata and longer user histories improve agreement. Rankings derived from LLM-judge labels achieve high agreement with human-based rankings (Kendall’s $\\tau$ up to 0.92 for nDCG@100 across 52 system configurations), comparable to values reported for TREC ad hoc retrieval collections. Crucially, LLM-judge recovers system rankings that are distorted under traditional evaluation---correctly identifying systems that are undervalued or overvalued by incomplete labels. An industrial case study in podcast recommendation further demonstrates the practical value of LLM-judge for model selection. Our results suggest that the LLM-judge evaluation paradigm can be effectively transferred from IR to RecSys, offering a scalable path toward unified evaluation frameworks across both communities.",
+    "session": "Poster",
+    "pdf": "https://usrw-workshop.github.io/2026/papers/62-from-ir-to-recsys-evaluating-llm-based-judges-in-cranfield-style-recommendation-collections.pdf"
+  },
+  {
+    "id": 220,
+    "title": "Keeping the Index Open: The Recommendation-Side Cost of Shared Search and Recommendation",
+    "authors": [
+      {
+        "name": "Dmitrii Timoshenko",
+        "affiliation": "Amazon Web Services"
+      },
+      {
+        "name": "Theodore Rogers",
+        "affiliation": "Amazon Web Services"
+      },
+      {
+        "name": "Zuhaib Akhtar",
+        "affiliation": "Amazon Web Services"
+      },
+      {
+        "name": "Joe Standerfer",
+        "affiliation": "Amazon Web Services"
+      },
+      {
+        "name": "Soyoung Yang",
+        "affiliation": "Amazon Web Services"
+      },
+      {
+        "name": "Haoxue Li",
+        "affiliation": "Amazon Web Services"
+      }
+    ],
+    "abstract": "A shared search-and-recommendation index has to score new items from their features alone, because search has no exploration slot in which to warm them up. On a public log carrying both surfaces over one catalog, 38.6% of query-search impressions in a held-out week show an item never previously shown or visited. On a narrower slice — engagements where the user, not the catalog, had no prior contact with the item — the feature-based tower serves that demand at no measurable penalty against 99 sampled negatives (0.9595 Recall@20 against 0.9510 warm), a parity a lexical baseline shares and a full-catalog check leaves statistically undecided. Dual-encoder (two-tower) retrieval keeps the index open in exactly this sense, where an ID-softmax recommender admits a new item only by retraining. We price that openness on the recommendation side — the half that admits controlled offline evaluation — against six sequential baselines, each retrained and tuned through five documented rounds on corrected targets (a float32 timestamp bug in a standard library silently reorders the leave-one-out target for 19.7% of users). Warm accuracy costs 5.2% Recall@20 relative (11.4% NDCG@20) against the strongest retrained baseline in each metric on MovieLens-1M (3.4K items); on MIND (9.4K items) the gap narrows to 0.8–3.6% of the five strongest baselines, though sixth of seven rows. Cold coverage is the payoff, and the shared index's tightest constraint: under a strict cold-start protocol with zero cold-item leakage the content tower reaches 0.172 ± 0.006 Recall@20, 1.4x the strongest of the three dedicated methods we could retrain (0.124 ± 0.007) and 3x a training-free floor, with no cold-start-dedicated training stage. The training objective hides a quality–scale trade-off. Swapping a deployed sampled InfoNCE recipe for exact full-softmax cross-entropy (loss, scoring, sampling and schedule move together) lifts test Recall@20 by 54% on MIND-small and 6.9% on MovieLens-1M, one matched pair per benchmark. But the exact objective recomputes the item tower catalog-wide every step and exhausts accelerator memory at a 240K-item catalog in our implementation, the scale that motivates the architecture. Approximate nearest-neighbor search contributes nothing to the gap and retrieval-stage serving cost does not regress against the ID-softmax class; a history-window sweep attributes half the post-recipe remainder. Exact-quality training at catalog scale is the open problem this leaves.",
+    "session": "Poster",
+    "pdf": "https://usrw-workshop.github.io/2026/papers/220-keeping-the-index-open-the-recommendation-side-cost-of-shared-search-and-recommendation.pdf"
+  },
+  {
+    "id": 204,
+    "title": "Multimodal Two-Tower Retrieval at Scale: Fusing Product Text and Images for E-Commerce Search",
+    "authors": [
+      {
+        "name": "Qujiaheng Zhang",
+        "affiliation": "Target Corporation"
+      },
+      {
+        "name": "Guangyue Xu",
+        "affiliation": "Target Corporation"
+      },
+      {
+        "name": "Alex Fengjie Li",
+        "affiliation": "Target Corporation"
+      }
+    ],
+    "abstract": "E-commerce customers make purchase decisions by jointly considering product text and visual information, yet most industrial retrieval systems rely almost exclusively on textual signals. Deployed at scale on CPU-based nearest-neighbor infrastructure, these systems leave substantial visual evidence untapped. In this work, we study unified text--image fusion for two-tower retrieval models at a large-scale e-commerce platform, training on 20M query--item pairs. We demonstrate that domain-specific fine-tuning and modality-specific query alignment between user queries and both product text and image modalities are crucial for effective multimodal retrieval. Building on these insights, we propose a mixture-of-modality-experts fusion architecture with a bilinear interaction network to capture cross-modal complementary information. Our model achieves up to 4.86\\% improvement in nDCG@1 for desirability and 2.36\\% for relevance over a strong text-only baseline, while preserving the pre-computable item embedding design required for production deployment.",
+    "session": "Poster",
+    "pdf": "https://usrw-workshop.github.io/2026/papers/204-multimodal-two-tower-retrieval-at-scale-fusing-product-text-and-images-for-e-commerce-search.pdf"
+  },
+  {
+    "id": 199,
+    "title": "MUSCLE: Multi-Attribute User Session for Query Classification",
+    "authors": [
+      {
+        "name": "Angjela Davitkova Gjurovska",
+        "affiliation": "RPTU"
+      },
+      {
+        "name": "Anna Tigunova",
+        "affiliation": "Amazon"
+      },
+      {
+        "name": "Paul Missault",
+        "affiliation": "Amazon"
+      },
+      {
+        "name": "Ghadir Eraisha",
+        "affiliation": "Amazon"
+      }
+    ],
+    "abstract": "Disambiguating broad user intent is an important challenge in e-commerce, as multiple possible meanings of ambiguous queries can result in completely different product selections. Such queries can be disambiguated in the context of the shopping session, as prior interactions provide crucial cues about users' underlying preferences. Existing query classification models ignore the cues from shopping sessions, effectively reducing the broad scope of possible customer preferences to a single interpretation. To address this limitation, we propose MUSCLE (Multi-attribute User Session for query CLassification)— a query classification framework leveraging the shopping session context to disambiguate broad intent and capture evolving user preferences. Our approach views user sessions as diverse sequences of queries, item interactions and contextual features, integrating semantic signals from queries with session-level behavioral patterns. We demonstrate that MUSCLE consistently outperforms state-of-the-art models, which ignore either the historical shopping behavior or the current search context. We show that by capturing both immediate query semantics and broader session context, MUSCLE consistently improves query classification on brand and product type prediction tasks, while remaining a practical solution for real-life applications.",
+    "session": "Poster",
+    "pdf": "https://usrw-workshop.github.io/2026/papers/199-muscle-multi-attribute-user-session-for-query-classification.pdf"
+  },
+  {
+    "id": 191,
+    "title": "Orthogonal Norm Growth in Two-Tower Retrieval: A Popularity Mechanism for Unified Discovery",
+    "authors": [
+      {
+        "name": "Andrei Atamaniuk",
+        "affiliation": "RWB"
+      }
+    ],
+    "abstract": "Unified search and recommendation systems can train and serve a common item representation from query-driven and query-free interaction streams. We isolate an optimizer-induced channel through which the frequencies of both streams can enter that shared representation's norm. The key distinction is between a cosine loss's output gradient, which is tangent to an embedding, and the embedding's realized displacement after encoder parameters are updated. We prove sufficient architectural and optimization conditions under which the latter is also tangent, so every nonzero update increases squared norm. Conditional on per-update increments, sequential task-labeled search and recommendation updates then add to the same shared norm; raw-inner-product serving can expose that norm on both surfaces. This is not an unconditional theorem about joint SGD. Controlled ablations test the exact premises. Experiments on MovieLens 32M and Amazon Books connect cumulative tangent displacement to frequency–norm association and to the additional head-item exposure admitted by raw dot-product rather than unit-item ranking. In a nonlinear ID-plus-content tower with heterogeneous adaptive optimizers, complete-output movement remains near-tangent; exact trajectory accounting and a matched norm-retraction intervention localize part of its exposure shift to the tangent ID path. Recommendation utility falls under retraction, so the intervention is diagnostic rather than a proposed mitigation. Our logs are recommendation-only: the two-stream formulation establishes a shared-representation mechanism and audit, while its prevalence in joint search–recommendation traffic remains an open empirical question.",
+    "session": "Poster",
+    "pdf": "https://usrw-workshop.github.io/2026/papers/191-orthogonal-norm-growth-in-two-tower-retrieval-a-popularity-mechanism-for-unified-discovery.pdf"
+  },
+  {
+    "id": 215,
+    "title": "Recovering Expert Critic-Sourced Graph Adjacency between Musical Artists from Acoustic Distributions: A Construct-Validity Approach",
+    "authors": [
+      {
+        "name": "Elena Badillo Goicoechea",
+        "affiliation": "University of Chicago"
+      },
+      {
+        "name": "Taylor He",
+        "affiliation": "University of Chicago"
+      }
+    ],
+    "abstract": "Music recommendation and discovery systems rely primarily on two kinds of signal: user--item interactions, an efficient yet limited heuristic presenting the cold-start among other problems, and intrinsic musical content, which remains available via computation for any recording and is therefore a natural basis for content-based discovery. We argue that a third signal, both statistically denser and more theoretically principled, yet largely untapped by these systems, exists: \\emph{critical adjacency}, the pairwise relation established when an expert music critic explicitly links two artists in long-form prose. Critical adjacency encodes deliberate, articulated judgments about which artists belong together, and prior work has shown it forms a coherent, internally valid artist knowledge. What has been missing given the novelty of said approach is external validation. For instance, is this critic-sourced relation grounded in the music itself, or merely in social and narrative context? We provide that source of validation by testing it against acoustic content, reframing the question as one of construct validity. Representing each artist as an empirical distribution over 80 low-level acoustic descriptors (Essentia) and modeling pairwise proximity via marginal optimal-transport (Wasserstein) distances, we evaluate the degree to which critical adjacency is sonically recoverable under a cold-start, artist-disjoint split. We find that our ensemble recovers critic-sourced edges with well-calibrated predicted edge probabilities, an overall out-of-sample area under the curve (AUC) of 0.767 (95\\% CI 0.761--0.775), and a high precision-recall ratio. Notably, graph recoverability rises monotonically with critical consensus, reaching AUC 0.865 on multi-source attested edges, while single-source mentions account for much of the residual gap. Furthermore, we find that typological evaluations align with sociological models of genre: tightly bounded, scene-based musical genres exhibit higher sonic recoverability, as AUC is still within 0.7 and 0.8 when evaluation the model within a given genre. Using rich audio distributions as an effective physical instrument for decomposing statistical signal embedded in critical discourse, our work demonstrates that expert critic consensus identifies a reproducible ``sonic core,'' whereas single-source edges mark a ``sociological remainder,'' potentially driven by narrative positioning, subcultural context, and canonical placement. This work both (1) offers a computationally efficient, user privacy-preserving, and easily scalable music discovery mechanism for cold-start recommendation and (2) motivates a sociologically grounded approach to MIR and MRS research by incorporating insight from the sociology of popular music.",
+    "session": "Poster",
+    "pdf": "https://usrw-workshop.github.io/2026/papers/215-recovering-expert-critic-sourced-graph-adjacency-between-musical-artists-from-acoustic-distributions-a-construct-validity-approach.pdf"
+  },
+  {
+    "id": 217,
+    "title": "Train Deep, Infer Shallow: Small Language Models for Semantic-ID Ads Retrieval",
+    "authors": [
+      {
+        "name": "Xinyuan Wang",
+        "affiliation": "Arizona State University"
+      },
+      {
+        "name": "Arun Sethupat",
+        "affiliation": "Pinterest"
+      },
+      {
+        "name": "Kushal Dave",
+        "affiliation": "Pinterest"
+      },
+      {
+        "name": "Skanda Vasudevan",
+        "affiliation": "Pinterest"
+      },
+      {
+        "name": "Dinesh Govindaraj",
+        "affiliation": "Pinterest"
+      },
+      {
+        "name": "Akanksha Baid",
+        "affiliation": "Pinterest"
+      }
+    ],
+    "abstract": "Early-stage ads retrieval must return a high-recall candidate set under strict online latency constraints, leaving fine-grained ranking to downstream models. We study Semantic-ID generative retrieval as a practical alternative to fixed ANN indices. Each ad is represented by a short, hierarchical sequence of residual-quantized Semantic IDs (SIDs), and a trie constrains decoding to valid catalog items. This representation also enables an inference-time granularity knob: a model can decode only the first k SID levels to retrieve coarse candidates more efficiently. Under fully cold-start evaluation on 3.1M queries, encoder--decoder autoregressive retrieval outperforms a strong production ANN baseline by 12% on recall@100. Per-level analysis shows that useful early-stage retrieval signal is concentrated in shallow SID levels. Accordingly, truncated decoding improves coarse recall by 9-34% while reducing autoregressive decoding latency by up to 64%. We further develop a deployable 4*8 SID design using self-supervised pre-training and deep-encoder/shallow-decoder architectures. A 14-layer 10+4 model reaches recall@100=0.5028 at 0.103 s/batch, within 3.9% of a 30-layer model while using roughly half its decoding latency. Finally, AR and ANN retrieve substantially different positives: only $24% of their correct top-100 retrievals overlap, and their union recovers $1.45\\times the positives of the stronger individual route. These results show that Semantic-ID retrieval can provide effective, diverse, and online-feasible candidate generation.",
+    "session": "Poster",
+    "pdf": "https://usrw-workshop.github.io/2026/papers/217-train-deep-infer-shallow-small-language-models-for-semantic-id-ads-retrieval.pdf"
+  },
+  {
+    "id": 202,
+    "title": "Unified Cross-Domain Semantic Retrieval for Cold-Start Audiobook Discovery",
+    "authors": [
+      {
+        "name": "Amit Goyal",
+        "affiliation": "Amazon"
+      }
+    ],
+    "abstract": "Recommending a new content type to users who have never tried it is a hard cold-start problem: there is no in-domain history to infer taste from. We study audiobook discovery on a large music streaming platform, where most users have never played an audiobook. Many of them, however, leave behavioral traces in other domains: podcasts, audiobooks elsewhere, videos, and related content. We turn those traces into recommendations with a text-based retrieval model. Each user is described by the titles of the items they recently consumed in each domain, each audiobook by its metadata, and one multilingual text encoder maps both into a single space, so recommendation becomes nearest-neighbor retrieval. A learned gate weights the domains per user and suppresses the ones a user lacks. The prior production model relied on collaborative co-consumption vectors, which carry no information about an item's content. Writing everything as text removes that limit and lets one dense-retrieval model serve both content matching and behavioral recommendation; it also enables title-level transfer across domains, for instance audiobook listening elsewhere informing discovery on the platform. We evaluate on a held-out worldwide cohort covering nine marketplace groups, always against a single production baseline. Music, podcast, and audiobook signals together improve Recall@10 by +27.3\\%, and adding a fourth signal, video, raises this to +32.8\\%. A per-cohort breakdown shows each signal helps the users who actually carry it: the audiobook signal is worth roughly +50\\% for that group, and video helps most for users whose only other signal is music. An online A/B test is underway and will appear in the camera-ready. Per company confidentiality requirements, we report relative numbers only.",
+    "session": "Poster",
+    "pdf": null
+  }
+]
