@@ -10,7 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
     article.className = "paper-card";
 
     const heading = document.createElement("h2");
-    heading.textContent = paper.title;
+    if (paper.pdf) {
+      const titleLink = document.createElement("a");
+      titleLink.href = paper.pdf;
+      titleLink.textContent = paper.title;
+      heading.appendChild(titleLink);
+    } else {
+      heading.textContent = paper.title;
+    }
     article.appendChild(heading);
 
     const authors = document.createElement("p");
