@@ -1,0 +1,121 @@
+.schedule-meta {
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.schedule-meta span {
+  padding: 0 0.4rem;
+  color: var(--color-muted);
+}
+
+.schedule-timezone {
+  margin-bottom: 1.4rem;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.schedule {
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  list-style: none;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 1.25rem;
+  margin: 0;
+  padding: 1.2rem 1.3rem;
+}
+
+.schedule-row + .schedule-row { border-top: 1px solid var(--color-border); }
+.schedule-row:first-child { border-radius: 9px 9px 0 0; }
+.schedule-row:last-child { border-radius: 0 0 9px 9px; }
+
+.schedule-time {
+  margin: 0.1rem 0 0;
+  color: var(--color-accent);
+  font-size: 0.84rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.schedule-content h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+
+.schedule-label {
+  margin: 0 0 0.35rem;
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.schedule-speaker {
+  margin: 0.45rem 0 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.schedule-detail {
+  margin: 0.35rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.schedule-row--featured {
+  background: #f3f7fc;
+  box-shadow: inset 3px 0 0 var(--color-accent);
+}
+
+.schedule-row--break { background: #f8fafc; }
+.schedule-row--break h3 { color: var(--color-muted); font-weight: 500; }
+
+.schedule-papers {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.schedule-papers li { margin: 0; }
+
+.schedule-papers li + li {
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.schedule-papers a {
+  display: block;
+  font-size: 0.94rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.schedule-authors {
+  margin: 0.3rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .schedule-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.45rem;
+    padding: 1.1rem;
+  }
+
+  .schedule-time { margin-top: 0; }
+  .schedule-content h3 { font-size: 1rem; }
+  .schedule-meta span { padding: 0 0.2rem; }
+}
