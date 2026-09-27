@@ -2,12 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const list = document.querySelector("[data-render='accepted-papers']");
   const count = document.querySelector("[data-paper-count]");
   const papers = window.ACCEPTED_PAPERS || [];
+  const sessions = window.PAPER_SESSIONS || {};
 
   if (count) count.textContent = papers.length;
 
   papers.forEach((paper) => {
     const article = document.createElement("article");
     article.className = "paper-card";
+    article.dataset.paperId = paper.id;
+
+    const session = document.createElement("p");
+    session.className = "paper-session";
+    session.textContent = sessions[paper.id] || "Poster";
+    session.dataset.session = session.textContent;
+    article.appendChild(session);
 
     const heading = document.createElement("h2");
     if (paper.pdf) {

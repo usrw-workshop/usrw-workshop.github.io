@@ -3,12 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!programme) return;
 
   const posterList = programme.querySelector("[data-render='poster-papers']");
-  const oralIds = new Set(
-    [...programme.querySelectorAll("[data-oral-papers] [data-paper-id]")]
-      .map((item) => Number(item.dataset.paperId)),
-  );
+  const sessions = window.PAPER_SESSIONS || {};
   const posters = (window.ACCEPTED_PAPERS || [])
-    .filter((paper) => !oralIds.has(paper.id));
+    .filter((paper) => (sessions[paper.id] || "Poster") === "Poster");
 
   posters.forEach((paper) => {
     const item = document.createElement("li");
