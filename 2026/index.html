@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="keynotes.css">
   <link rel="stylesheet" href="tutorial.css">
   <script src="config.js"></script>
+  <script src="accepted-papers-data.js" defer></script>
+  <script src="programme.js" defer></script>
 </head>
 <body>
 
@@ -82,7 +84,15 @@
       </div>
     </li>
     <li class="schedule-row"><p class="schedule-time">9:45 am – 10:00 am</p>
-      <div class="schedule-content"><h3>Poster Lightning Pitches</h3><p class="schedule-detail">~1-minute pitch per poster</p></div>
+      <div class="schedule-content">
+        <h3>Poster Lightning Pitches</h3>
+        <p class="schedule-detail">~1-minute pitch per poster</p>
+        <details class="schedule-disclosure" data-poster-papers>
+          <summary>Show poster papers</summary>
+          <ul class="schedule-papers" data-render="poster-papers"></ul>
+          <noscript><p class="schedule-detail">See the <a href="accepted-papers.html">accepted papers</a> for paper details.</p></noscript>
+        </details>
+      </div>
     </li>
     <li class="schedule-row schedule-row--break"><p class="schedule-time">10:00 am – 10:30 am</p>
       <div class="schedule-content"><h3>Coffee Break / Informal Poster Viewing</h3></div>
@@ -92,18 +102,21 @@
       <div class="schedule-content">
         <h3>Oral Paper Session I</h3>
         <p class="schedule-detail">10-minute presentation + 2-minute Q&amp;A per paper</p>
-        <ul class="schedule-papers">
-          <li><a href="papers/214-one-hierarchy-two-systems-semantic-product-ids-for-discovery-surface-ranking-and-search-page-query-reformulation.pdf">One Hierarchy, Two Systems: Semantic Product IDs for Discovery-Surface Ranking and Search-Page Query Reformulation.</a>
-            <p class="schedule-authors">Steven Xu, Sanjyot Thete, Raghav Saboo, Nimesh Sinha, Saathvik Dirisala and Sudeep Das</p></li>
-          <li><a href="papers/77-robust-fusion-of-semantic-and-behavioural-signals-for-llm-reranking-in-personalised-search.pdf">Robust Fusion of Semantic and Behavioural Signals for LLM Reranking in Personalised Search.</a>
-            <p class="schedule-authors">Aleksandr V. Petrov, Nathan Stein, Erik Lybecker, Emma Schüldt, Daniel Lazarovski, Hugues Bouchard and Mounia Lalmas</p></li>
-          <li><a href="papers/88-from-clicks-to-carts-reinforcement-learning-for-intent-driven-personalized-product-search-in-e-commerce.pdf">From Clicks to Carts: Reinforcement Learning for Intent-Driven Personalized Product Search in E-Commerce.</a>
-            <p class="schedule-authors">Harpreet Kaur, Zekai Chen, Sumit Negi and Kai-Wei Chang</p></li>
-          <li><a href="papers/223-nearest-but-not-dearest-shared-curator-feedback-infrastructure-for-content-only-search-and-recommendation.pdf">Nearest but Not Dearest: Shared Curator-Feedback Infrastructure for Content-Only Search and Recommendation.</a>
-            <p class="schedule-authors">Matt Sandler</p></li>
-          <li><a href="papers/104-every-article-deserves-a-video-contextual-video-matching-for-digital-publishers.pdf">Every Article Deserves a Video: Contextual Video Matching for Digital Publishers.</a>
-            <p class="schedule-authors">Arnaud Corone, Brice Pierre de la Briere, Gladys Roch, Samuel Leonardo Gracio, Yassine Bouher and Parvati Chauchaix</p></li>
-        </ul>
+        <details class="schedule-disclosure" data-oral-papers>
+          <summary>Show papers</summary>
+          <ul class="schedule-papers">
+            <li data-paper-id="214"><a href="papers/214-one-hierarchy-two-systems-semantic-product-ids-for-discovery-surface-ranking-and-search-page-query-reformulation.pdf">One Hierarchy, Two Systems: Semantic Product IDs for Discovery-Surface Ranking and Search-Page Query Reformulation.</a>
+              <p class="schedule-authors">Steven Xu, Sanjyot Thete, Raghav Saboo, Nimesh Sinha, Saathvik Dirisala and Sudeep Das</p></li>
+            <li data-paper-id="77"><a href="papers/77-robust-fusion-of-semantic-and-behavioural-signals-for-llm-reranking-in-personalised-search.pdf">Robust Fusion of Semantic and Behavioural Signals for LLM Reranking in Personalised Search.</a>
+              <p class="schedule-authors">Aleksandr V. Petrov, Nathan Stein, Erik Lybecker, Emma Schüldt, Daniel Lazarovski, Hugues Bouchard and Mounia Lalmas</p></li>
+            <li data-paper-id="88"><a href="papers/88-from-clicks-to-carts-reinforcement-learning-for-intent-driven-personalized-product-search-in-e-commerce.pdf">From Clicks to Carts: Reinforcement Learning for Intent-Driven Personalized Product Search in E-Commerce.</a>
+              <p class="schedule-authors">Harpreet Kaur, Zekai Chen, Sumit Negi and Kai-Wei Chang</p></li>
+            <li data-paper-id="223"><a href="papers/223-nearest-but-not-dearest-shared-curator-feedback-infrastructure-for-content-only-search-and-recommendation.pdf">Nearest but Not Dearest: Shared Curator-Feedback Infrastructure for Content-Only Search and Recommendation.</a>
+              <p class="schedule-authors">Matt Sandler</p></li>
+            <li data-paper-id="104"><a href="papers/104-every-article-deserves-a-video-contextual-video-matching-for-digital-publishers.pdf">Every Article Deserves a Video: Contextual Video Matching for Digital Publishers.</a>
+              <p class="schedule-authors">Arnaud Corone, Brice Pierre de la Briere, Gladys Roch, Samuel Leonardo Gracio, Yassine Bouher and Parvati Chauchaix</p></li>
+          </ul>
+        </details>
       </div>
     </li>
     <li class="schedule-row schedule-row--break"><p class="schedule-time">12:00 pm – 1:30 pm</p>
@@ -113,7 +126,7 @@
       <div class="schedule-content">
         <p class="schedule-label">Keynote</p>
         <h3>When Search and Recommendation become One Conversation</h3>
-        <p class="schedule-speaker">Mounia Lalmas-Roelleke</p>
+        <p class="schedule-speaker">Mounia Lalmas</p>
         <p class="schedule-detail">45-minute presentation + 15 minutes of Q&amp;A</p>
       </div>
     </li>
@@ -122,12 +135,15 @@
       <div class="schedule-content">
         <h3>Oral Paper Session II</h3>
         <p class="schedule-detail">10-minute presentation + 2-minute Q&amp;A per paper</p>
-        <ul class="schedule-papers">
-          <li><a href="papers/208-moss-a-production-framework-for-monitoring-and-diagnosing-semantic-failures-in-search-and-recommendation-systems.pdf">MOSS: A Production Framework for Monitoring and Diagnosing Semantic Failures in Search and Recommendation Systems.</a>
-            <p class="schedule-authors">Alina Nesen, Prathyusha Kanmanth Reddy, David Relyea, Rohit Avinash Mujumdar, Samaneh Karimi, Bo Shen and Jordan Hashemi</p></li>
-          <li><a href="papers/164-an-llm-powered-agentic-recommendation-system-for-connected-tv-content-discovery.pdf">An LLM-powered Agentic Recommendation System for Connected TV Content Discovery.</a>
-            <p class="schedule-authors">Lei Shi, Di Wang, Harry Tran, Helsing Xu, Yuchen Lu, Dhara Ghodasara, Wilson Chaney, Xueting Liao, Jerry Yu, Huayu Ding, Reza Mirghaderi, David Fan, Qi Guo, Chongguang He, Warren Wang, Mingze Gao, Shike Mei, Shuo Tang, Zhe Zhang, Jianming He, Abhishek Kumar, Haotian Wu, Hamed Firooz and Li Li</p></li>
-        </ul>
+        <details class="schedule-disclosure" data-oral-papers>
+          <summary>Show papers</summary>
+          <ul class="schedule-papers">
+            <li data-paper-id="208"><a href="papers/208-moss-a-production-framework-for-monitoring-and-diagnosing-semantic-failures-in-search-and-recommendation-systems.pdf">MOSS: A Production Framework for Monitoring and Diagnosing Semantic Failures in Search and Recommendation Systems.</a>
+              <p class="schedule-authors">Alina Nesen, Prathyusha Kanmanth Reddy, David Relyea, Rohit Avinash Mujumdar, Samaneh Karimi, Bo Shen and Jordan Hashemi</p></li>
+            <li data-paper-id="164"><a href="papers/164-an-llm-powered-agentic-recommendation-system-for-connected-tv-content-discovery.pdf">An LLM-powered Agentic Recommendation System for Connected TV Content Discovery.</a>
+              <p class="schedule-authors">Lei Shi, Di Wang, Harry Tran, Helsing Xu, Yuchen Lu, Dhara Ghodasara, Wilson Chaney, Xueting Liao, Jerry Yu, Huayu Ding, Reza Mirghaderi, David Fan, Qi Guo, Chongguang He, Warren Wang, Mingze Gao, Shike Mei, Shuo Tang, Zhe Zhang, Jianming He, Abhishek Kumar, Haotian Wu, Hamed Firooz and Li Li</p></li>
+          </ul>
+        </details>
       </div>
     </li>
     <li class="schedule-row schedule-row--break"><p class="schedule-time">3:00 pm – 3:30 pm</p>
@@ -138,10 +154,13 @@
       <div class="schedule-content">
         <h3>Oral Paper Session III</h3>
         <p class="schedule-detail">10-minute presentation + 2-minute Q&amp;A</p>
-        <ul class="schedule-papers">
-          <li><a href="papers/206-unified-ranking-across-retrieval-channels-a-large-scale-e-commerce-approach.pdf">Unified Ranking Across Retrieval Channels: A Large-Scale E-Commerce Approach.</a>
-            <p class="schedule-authors">Aditya Gaydhani, Guangyue Xu, Dhanush Kamath, Ankit Singh and Alex Li</p></li>
-        </ul>
+        <details class="schedule-disclosure" data-oral-papers>
+          <summary>Show papers</summary>
+          <ul class="schedule-papers">
+            <li data-paper-id="206"><a href="papers/206-unified-ranking-across-retrieval-channels-a-large-scale-e-commerce-approach.pdf">Unified Ranking Across Retrieval Channels: A Large-Scale E-Commerce Approach.</a>
+              <p class="schedule-authors">Aditya Gaydhani, Guangyue Xu, Dhanush Kamath, Ankit Singh and Alex Li</p></li>
+          </ul>
+        </details>
       </div>
     </li>
     <li class="schedule-row schedule-row--featured"><p class="schedule-time">3:45 pm – 4:45 pm</p>
