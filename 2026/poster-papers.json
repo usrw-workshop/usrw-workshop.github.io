@@ -37,89 +37,29 @@
     "pdf": "https://usrw-workshop.github.io/2026/papers/200-a-unified-framework-for-evaluating-systems-that-allocate-visibility-algorithmically.pdf"
   },
   {
-    "id": 187,
-    "title": "Dear Algo: A Precision-First Agentic Intent Layer for Unified Search and Recommendation",
+    "id": 88,
+    "title": "From Clicks to Carts: Reinforcement Learning for Intent-Driven Personalized Product Search in E-Commerce",
     "authors": [
       {
-        "name": "Rui Wang",
-        "affiliation": "Meta"
+        "name": "Harpreet Kaur",
+        "affiliation": "Amazon"
       },
       {
-        "name": "Jiazhou Wang",
-        "affiliation": "Meta"
+        "name": "Zekai Chen",
+        "affiliation": "Amazon"
       },
       {
-        "name": "Zheng Wei",
-        "affiliation": "Meta"
+        "name": "Sumit Negi",
+        "affiliation": "Amazon"
       },
       {
-        "name": "Chenglin Lu",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Fangcheng Sun",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Ivy Sun",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Jin Sun",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Hui Geng",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Lillian Zhang",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Chao Yang",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Lei Chen",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Shahin Sefati",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Reem Helou",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Joe Zhou",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Babak Shakibi",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Yiyi Pan",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Bi Xue",
-        "affiliation": "Meta"
-      },
-      {
-        "name": "Hong Yan",
-        "affiliation": "Google DeepMind"
-      },
-      {
-        "name": "Shujian Bu",
-        "affiliation": "Meta"
+        "name": "Kai-Wei Chang",
+        "affiliation": "Amazon"
       }
     ],
-    "abstract": "Search and recommendation serve a shared discovery objective but encode intent differently. We study this boundary through Dear Algo on Threads, a deployed product where open-ended requests such as \\emph{more NBA news} or \\emph{less politics} steer subsequent feed recommendations rather than return a one-shot result list. Its agentic intent layer compiles explicit, inferred, negative, and compound intent into a grounded executable plan, then invokes conventional retrieval and optional semantic or multimodal reranking. The layer shares an intent-to-retrieval contract without requiring one model or serving path across search-like and recommendation-like modes. We evaluate Dear Algo under a precision-first objective. In a blinded audit of 300 public request-item pairs (296 evaluable), a strict categorical LLM-as-a-judge gate achieved 94.4% exact-Relevant precision [88.8%, 98.9%]. Across 72 normalized request clusters, the full configuration produced 7.73 judge-qualified candidates per 20 slots versus 6.61 for an LLM-derived-query baseline, a gain of 1.11 [0.12, 2.12]. In a candidate-randomized serving-path study restricted to the reranker path's first 72 eligible hours, the user-weighted judge-Irrelevant share among judged admissions was 2.80% versus 4.78% off (-1.97 points [-3.02, -0.94]), while Exact-Relevant share was 2.24 points higher [0.08, 4.41]. Together, these studies show how explicit natural-language intent can be carried into feed recommendation under a precision-first evaluation framework.",
+    "abstract": "",
     "session": "Poster",
-    "pdf": "https://usrw-workshop.github.io/2026/papers/187-dear-algo-a-precision-first-agentic-intent-layer-for-unified-search-and-recommendation.pdf"
+    "pdf": "https://usrw-workshop.github.io/2026/papers/88-from-clicks-to-carts-reinforcement-learning-for-intent-driven-personalized-product-search-in-e-commerce.pdf"
   },
   {
     "id": 62,
@@ -210,27 +150,6 @@
     "abstract": "A shared search-and-recommendation index has to score new items from their features alone, because search has no exploration slot in which to warm them up. On a public log carrying both surfaces over one catalog, 38.6% of query-search impressions in a held-out week show an item never previously shown or visited. On a narrower slice — engagements where the user, not the catalog, had no prior contact with the item — the feature-based tower serves that demand at no measurable penalty against 99 sampled negatives (0.9595 Recall@20 against 0.9510 warm), a parity a lexical baseline shares and a full-catalog check leaves statistically undecided. Dual-encoder (two-tower) retrieval keeps the index open in exactly this sense, where an ID-softmax recommender admits a new item only by retraining. We price that openness on the recommendation side — the half that admits controlled offline evaluation — against six sequential baselines, each retrained and tuned through five documented rounds on corrected targets (a float32 timestamp bug in a standard library silently reorders the leave-one-out target for 19.7% of users). Warm accuracy costs 5.2% Recall@20 relative (11.4% NDCG@20) against the strongest retrained baseline in each metric on MovieLens-1M (3.4K items); on MIND (9.4K items) the gap narrows to 0.8–3.6% of the five strongest baselines, though sixth of seven rows. Cold coverage is the payoff, and the shared index's tightest constraint: under a strict cold-start protocol with zero cold-item leakage the content tower reaches 0.172 ± 0.006 Recall@20, 1.4x the strongest of the three dedicated methods we could retrain (0.124 ± 0.007) and 3x a training-free floor, with no cold-start-dedicated training stage. The training objective hides a quality–scale trade-off. Swapping a deployed sampled InfoNCE recipe for exact full-softmax cross-entropy (loss, scoring, sampling and schedule move together) lifts test Recall@20 by 54% on MIND-small and 6.9% on MovieLens-1M, one matched pair per benchmark. But the exact objective recomputes the item tower catalog-wide every step and exhausts accelerator memory at a 240K-item catalog in our implementation, the scale that motivates the architecture. Approximate nearest-neighbor search contributes nothing to the gap and retrieval-stage serving cost does not regress against the ID-softmax class; a history-window sweep attributes half the post-recipe remainder. Exact-quality training at catalog scale is the open problem this leaves.",
     "session": "Poster",
     "pdf": "https://usrw-workshop.github.io/2026/papers/220-keeping-the-index-open-the-recommendation-side-cost-of-shared-search-and-recommendation.pdf"
-  },
-  {
-    "id": 204,
-    "title": "Multimodal Two-Tower Retrieval at Scale: Fusing Product Text and Images for E-Commerce Search",
-    "authors": [
-      {
-        "name": "Qujiaheng Zhang",
-        "affiliation": "Target Corporation"
-      },
-      {
-        "name": "Guangyue Xu",
-        "affiliation": "Target Corporation"
-      },
-      {
-        "name": "Alex Fengjie Li",
-        "affiliation": "Target Corporation"
-      }
-    ],
-    "abstract": "E-commerce customers make purchase decisions by jointly considering product text and visual information, yet most industrial retrieval systems rely almost exclusively on textual signals. Deployed at scale on CPU-based nearest-neighbor infrastructure, these systems leave substantial visual evidence untapped. In this work, we study unified text--image fusion for two-tower retrieval models at a large-scale e-commerce platform, training on 20M query--item pairs. We demonstrate that domain-specific fine-tuning and modality-specific query alignment between user queries and both product text and image modalities are crucial for effective multimodal retrieval. Building on these insights, we propose a mixture-of-modality-experts fusion architecture with a bilinear interaction network to capture cross-modal complementary information. Our model achieves up to 4.86\\% improvement in nDCG@1 for desirability and 2.36\\% for relevance over a strong text-only baseline, while preserving the pre-computable item embedding design required for production deployment.",
-    "session": "Poster",
-    "pdf": "https://usrw-workshop.github.io/2026/papers/204-multimodal-two-tower-retrieval-at-scale-fusing-product-text-and-images-for-e-commerce-search.pdf"
   },
   {
     "id": 199,
