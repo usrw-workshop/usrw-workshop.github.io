@@ -6,10 +6,6 @@ import unicodedata
 from pathlib import Path
 
 
-# Paper 202 is awaiting Amit Goyal's final PDF; the anonymous draft stays private.
-ABSTRACT_ONLY_SUBMISSIONS = {202}
-
-
 def pdf_filename(paper: dict) -> str:
     title = unicodedata.normalize("NFKD", paper["title"])
     title = title.encode("ascii", "ignore").decode("ascii").lower()
@@ -27,9 +23,6 @@ def find_pdf(source_dir: Path, submission_id: int) -> Path | None:
 
 def link_pdf(paper: dict, source_dir: Path, papers_dir: Path) -> None:
     paper.pop("pdf", None)
-    if paper["id"] in ABSTRACT_ONLY_SUBMISSIONS:
-        return
-
     destination = papers_dir / pdf_filename(paper)
     source = find_pdf(source_dir, paper["id"])
     if source:
