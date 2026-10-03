@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1275 930" role="img" aria-labelledby="title desc">
+  <title id="title">YouTube recommendation candidate generation</title>
+  <desc id="desc">Adapted from Figure 3 of Deep Neural Networks for YouTube Recommendations, Covington, Adams and Sargin, 2016, doi:10.1145/2959100.2959190. Separate watch and search-token embeddings are averaged and concatenated with context features. Three ReLU layers produce a user vector. Training uses softmax; serving uses a nearest-neighbor index of video vectors. Diagram redrawn for the USRW tutorial; embedding colors are schematic.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#202523" stroke-width="1.5"/></marker>
+    <pattern id="watch" width="24" height="96" patternUnits="userSpaceOnUse"><path fill="#cfe2f2" d="M0 0h24v96H0z"/><path fill="#77abd1" d="M0 24h24v24H0z"/><path fill="#226496" d="M0 72h24v24H0z"/></pattern>
+    <pattern id="search" width="24" height="96" patternUnits="userSpaceOnUse"><path fill="#dcebd3" d="M0 0h24v96H0z"/><path fill="#9cc780" d="M0 24h24v24H0z"/><path fill="#477f2b" d="M0 72h24v24H0z"/></pattern>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #202523; font-size: 27px; text-anchor: middle; }
+      .small { font-size: 23px; }
+      .label { font-size: 25px; }
+      .box { stroke: #202523; stroke-width: 2; }
+      .flow { fill: none; stroke: #202523; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1275" height="930" fill="white"/>
+  <!-- Output paths: the learned video vectors supply the serving index. -->
+  <rect x="240" y="30" width="380" height="192" fill="none" stroke="#59615c" stroke-width="2" stroke-dasharray="8 6"/>
+  <path class="box" fill="#f5f8f5" d="M292 106v76c0 28 238 28 238 0v-76z"/>
+  <ellipse class="box" cx="411" cy="106" rx="119" ry="19" fill="white"/>
+  <text x="411" y="155">nearest-neighbor</text><text x="411" y="184">index</text>
+  <path class="flow" d="M411 88V66"/>
+  <text x="411" y="56">approx. top N</text>
+  <text class="label" x="267" y="256">serving</text>
+  <rect class="box" x="755" y="127" width="180" height="38" fill="white"/>
+  <text x="845" y="155">softmax</text>
+  <path class="flow" d="M845 127V91"/>
+  <text x="845" y="75">class probabilities</text>
+  <path class="flow" d="M755 146H532"/>
+  <text class="small" x="642" y="131">video vectors vⱼ</text>
+  <text class="label" x="870" y="216">training</text>
+  <path class="flow" d="M651 235C622 218 428 222 411 202"/>
+  <path class="flow" d="M651 235C680 203 845 200 845 166"/>
+  <text class="small" x="601" y="208">user vector u</text>
+  <!-- Deep network, preserving the three-layer structure of Figure 3. -->
+  <rect class="box" x="570" y="235" width="163" height="37" fill="#f1cecb"/>
+  <text x="651" y="263">ReLU</text>
+  <path class="flow" d="M651 303V274"/>
+  <rect class="box" x="485" y="303" width="332" height="37" fill="#f1cecb"/>
+  <text x="651" y="331">ReLU</text>
+  <path class="flow" d="M651 365V342"/>
+  <rect class="box" x="320" y="365" width="661" height="37" fill="#f1cecb"/>
+  <text x="651" y="393">ReLU</text>
+  <path class="flow" d="M651 434V404"/>
+  <!-- Concatenated embeddings and scalar/context features. -->
+  <rect class="box" x="208" y="434" width="245" height="38" fill="#cfe2f2"/>
+  <rect class="box" x="453" y="434" width="245" height="38" fill="#dcebd3"/>
+  <rect class="box" x="698" y="434" width="164" height="38" fill="#ddd6e8"/>
+  <text x="330" y="463">watch vector</text><text x="575" y="463">search vector</text>
+  <text x="902" y="461">…</text>
+  <rect class="box" x="944" y="434" width="49" height="38" fill="#fff0c7"/>
+  <rect class="box" x="993" y="434" width="49" height="38" fill="#fff0c7"/>
+  <rect class="box" x="1042" y="434" width="49" height="38" fill="#ddd"/>
+  <text x="968" y="463">x</text><text x="1017" y="463">x²</text><text x="1124" y="461">…</text>
+  <path class="flow" d="M265 545C265 510 330 511 330 474"/>
+  <path class="flow" d="M605 545C605 511 575 507 575 474"/>
+  <path class="flow" d="M810 611C810 550 780 537 780 474"/>
+  <path class="flow" d="M958 548C958 510 992 510 992 474"/>
+  <path class="flow" d="M1110 585C1110 531 1067 522 1067 474"/>
+  <text class="label" x="813" y="642">geographic</text><text class="label" x="813" y="674">embedding</text>
+  <text class="label" x="978" y="579">example age</text><text class="label" x="1110" y="615">gender</text>
+  <rect class="box" x="204" y="545" width="122" height="38" fill="white"/>
+  <rect class="box" x="544" y="545" width="122" height="38" fill="white"/>
+  <text x="265" y="573">average</text><text x="605" y="573">average</text>
+  <!-- Token/video bars are schematic, not measured embedding values. -->
+  <g class="flow">
+    <path d="M176 640C176 613 265 608 265 585"/><path d="M218 640C218 610 265 610 265 585"/><path d="M330 640C330 613 265 608 265 585"/>
+    <path d="M522 640C522 613 605 608 605 585"/><path d="M564 640C564 610 605 610 605 585"/><path d="M680 640C680 613 605 608 605 585"/>
+  </g>
+  <g class="box" fill="url(#watch)"><rect x="164" y="640" width="24" height="230"/><rect x="206" y="640" width="24" height="230"/><rect x="318" y="640" width="24" height="230"/></g>
+  <g class="box" fill="url(#search)"><rect x="510" y="640" width="24" height="230"/><rect x="552" y="640" width="24" height="230"/><rect x="668" y="640" width="24" height="230"/></g>
+  <text x="273" y="750">…</text><text x="619" y="750">…</text>
+  <text x="260" y="908">embedded video watches</text><text x="612" y="908">embedded search tokens</text>
+</svg>

@@ -1,0 +1,50 @@
+(function () {
+  window.USRWDeck.registerSlide({
+    id: "block-3-latent-factors",
+    title: "Recommendation’s own research agenda",
+    layout: "block-three",
+    mode: "core",
+    modeLabel: "Block 3 · The divergence",
+    duration: "21:00-23:00",
+    status: "DRAFT",
+    showMeta: false,
+    role: "A ratings benchmark and a dedicated venue reinforced the focus on user preferences.",
+    citations: [
+      "bennett2007netflix",
+      "acm2007recsys",
+      "koren2009matrix",
+      "hu2008implicit",
+      "rendle2009bpr",
+      "he2017neural",
+      "huang2013dssm"
+    ],
+    html: [
+      "<div class=\"divergence-agenda-slide\">",
+      "  <section class=\"agenda-milestone agenda-netflix\" aria-labelledby=\"agenda-netflix-title\">",
+      "    <span class=\"agenda-year\">2006 · Benchmark</span>",
+      "    <h2 id=\"agenda-netflix-title\">Netflix Prize <sup class=\"citation-marker\" data-cite=\"bennett2007netflix\"></sup></h2>",
+      "    <p class=\"agenda-data\">100M+ 1–5-star movie ratings</p>",
+      "    <p>Predict ratings. Minimize rating error (RMSE).</p>",
+      "    <p class=\"agenda-contrast\">Not a query-relevance benchmark.</p>",
+      "  </section>",
+      "  <section class=\"agenda-milestone agenda-conference\" data-fragment aria-labelledby=\"agenda-conference-title\">",
+      "    <span class=\"agenda-year\">2007 · Research community</span>",
+      "    <h2 id=\"agenda-conference-title\">First ACM RecSys <sup class=\"citation-marker\" data-cite=\"acm2007recsys\"></sup></h2>",
+      "    <p class=\"agenda-data\">A venue devoted to recommendation</p>",
+      "    <p>A distinct research community takes shape.</p>",
+      "  </section>",
+      "  <section class=\"agenda-program\" data-fragment aria-labelledby=\"agenda-program-title\">",
+      "    <h2 id=\"agenda-program-title\">Matrix factorization stayed central to collaborative filtering into the 2010s. <sup class=\"citation-marker\" data-cite=\"koren2009matrix he2017neural\"></sup></h2>",
+      "    <div class=\"agenda-advances\">",
+      "      <p><strong>2008 · Implicit ALS <sup class=\"citation-marker\" data-cite=\"hu2008implicit\"></sup></strong><span>Learn user and item vectors from behavior.</span></p>",
+      "      <p><strong>2009 · BPR-MF <sup class=\"citation-marker\" data-cite=\"rendle2009bpr\"></sup></strong><span>Rank preferred items above unobserved ones.</span></p>",
+      "    </div>",
+      "  </section>",
+      "  <aside class=\"agenda-transition\" data-fragment aria-label=\"Bridge to the embedding comparison\">",
+      "    <strong>Meanwhile, neural models learned vectors for text. <sup class=\"citation-marker\" data-cite=\"huang2013dssm\"></sup></strong>",
+      "    <p>A route back toward shared representations for search and recommendation.</p>",
+      "  </aside>",
+      "</div>"
+    ].join("")
+  });
+}());

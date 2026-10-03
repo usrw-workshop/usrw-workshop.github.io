@@ -1,0 +1,46 @@
+.slide-title h1 {
+  max-width: 1040px;
+}
+
+.slide-title .slide-grid,
+.slide-section .slide-grid {
+  grid-template-columns: 1fr;
+}
+
+.slide-title .placeholder-card,
+.slide-section .placeholder-card {
+  min-height: 220px;
+}
+
+.slide-title .evidence-card,
+.slide-section .evidence-card {
+  display: none;
+}
+
+.slide-taxonomy .placeholder-card {
+  background: #eef6f3;
+}
+
+.slide-evaluation .placeholder-card {
+  background: #f2f0fb;
+}
+
+.slide-decision .placeholder-card {
+  background: #eef3f5;
+}
+
+.slide-extension {
+  border-top: 8px solid var(--extension);
+}
+
+@media (max-width: 860px) {
+  .slide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .paper-plan-list li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+}

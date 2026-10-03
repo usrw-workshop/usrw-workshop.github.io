@@ -1,0 +1,159 @@
+.slide[data-slide-id="title"] {
+  display: grid;
+  grid-template-rows: auto auto auto minmax(0, 1fr);
+  border: 0;
+  background: #fff;
+  padding: 0;
+}
+
+.slide[data-slide-id="title"]::before {
+  height: 9px;
+  position: absolute;
+  z-index: 3;
+  inset: 0 0 auto;
+  background: var(--accent);
+  content: "";
+}
+
+.slide[data-slide-id="title"] .slide-kicker {
+  margin: 55px 86px 0;
+  color: var(--accent-strong);
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.slide[data-slide-id="title"] h1 {
+  max-width: none;
+  margin: 15px 86px 0;
+  color: var(--fg);
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+
+.slide[data-slide-id="title"] .slide-role {
+  max-width: none;
+  margin: 6px 86px 0;
+  color: var(--accent-strong);
+  font-size: 42px;
+  font-weight: 720;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.slide[data-slide-id="title"] .slide-content {
+  min-height: 0;
+  margin-top: 24px;
+}
+
+.title-composition {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 164px;
+  align-content: space-between;
+}
+
+.title-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(310px, 0.75fr);
+  gap: 52px;
+  align-items: end;
+  padding: 0 86px 26px;
+}
+
+.title-thesis {
+  max-width: 650px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 24px;
+  font-weight: 480;
+  line-height: 1.35;
+}
+
+.title-event {
+  display: grid;
+  gap: 7px;
+  padding-left: 20px;
+  border-left: 4px solid var(--accent);
+  color: var(--fg);
+}
+
+.title-event span {
+  font-size: 16px;
+  font-weight: 760;
+  line-height: 1.25;
+}
+
+.title-event strong {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 570;
+}
+
+.title-presenters {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 62px;
+  align-content: center;
+  padding: 22px 220px 22px 86px;
+  background: #edf7f0;
+}
+
+.title-presenter {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+}
+
+.title-portrait {
+  display: block;
+  width: 112px;
+  height: 112px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #dbe8df;
+}
+
+.title-portrait img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.title-portrait--aleksandr img {
+  object-position: 51% 43%;
+}
+
+.title-portrait--gustavo img {
+  object-position: 50% 37%;
+}
+
+.title-presenter figcaption {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+  text-align: left;
+}
+
+.title-presenter figcaption strong {
+  color: var(--fg);
+  font-size: 21px;
+  line-height: 1.12;
+}
+
+.title-presenter figcaption span {
+  color: var(--accent-strong);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.slide[data-slide-id="title"] .slide-brand-stamp {
+  bottom: 27px;
+}

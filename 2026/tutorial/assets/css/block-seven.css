@@ -1,0 +1,145 @@
+.slide-block-seven h1,
+.slide-block-seven .slide-role {
+  max-width: 1120px;
+}
+
+.slide-block-seven .slide-content {
+  margin-top: 14px;
+}
+
+.protocol-progression {
+  display: grid;
+  grid-template-columns: 1fr 34px 1fr 34px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.protocol-card {
+  min-height: 230px;
+  padding: 17px 18px;
+  border: 0;
+  background: transparent;
+  text-align: center;
+}
+
+.protocol-card.is-joint {
+  border: 0;
+  border-radius: 32px;
+  background: linear-gradient(150deg, #e6f6ec, #f8fbf9);
+}
+
+.protocol-year {
+  display: block;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.protocol-card strong,
+.protocol-card .protocol-model,
+.protocol-card b,
+.protocol-card small {
+  display: block;
+}
+
+.protocol-card strong {
+  margin-top: 17px;
+  font-size: 23px;
+  line-height: 1.08;
+}
+
+.protocol-card strong em {
+  color: var(--muted);
+  font-size: 16px;
+  font-style: normal;
+}
+
+.protocol-model {
+  display: inline-block;
+  margin-top: 9px;
+  padding: 3px 10px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--accent-strong);
+  background: #eef7f7;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+.protocol-arrow {
+  display: block;
+  margin: 4px 0;
+  color: var(--accent);
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.protocol-card b {
+  color: var(--accent-strong);
+  font-size: 19px;
+  line-height: 1.15;
+}
+
+.protocol-card small {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.progression-arrow {
+  color: var(--accent);
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.protocol-signal-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 14px;
+}
+
+.protocol-signal-split span {
+  padding: 11px 14px;
+  border-top: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.protocol-signal-split strong {
+  color: var(--fg);
+}
+
+.protocol-bottom-line {
+  margin: 11px 0 0;
+  color: var(--accent-strong);
+  font-size: 22px;
+  font-weight: 850;
+  text-align: center;
+}
+
+.slide-block-seven [data-fragment] {
+  opacity: 0;
+  transform: translateY(7px);
+  transition: opacity 150ms ease, transform 180ms ease;
+}
+
+.slide-block-seven [data-fragment].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media print {
+  .slide-block-seven [data-fragment] {
+    opacity: 1;
+    transform: none;
+  }
+}

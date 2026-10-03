@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" role="img" aria-labelledby="title desc">
+  <title id="title">Search and recommendation contracts as a teaching abstraction from Belkin and Croft</title>
+  <desc id="desc">A minimal schematic showing search as answering an expressed request now and recommendation-like filtering as managing future exposure from stored interest, while both can share represent, compare, expose, and update machinery.</desc>
+  <defs>
+    <marker id="bc-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#007985"/>
+    </marker>
+    <marker id="bc-arrow-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8aa8ad"/>
+    </marker>
+    <style>
+      .bg { fill: #fff; }
+      .stage { fill: #f4f9fa; stroke: #bfd5da; stroke-width: 2; rx: 22; }
+      .stage-title { fill: #00565f; font: 850 25px Inter, Arial, sans-serif; }
+      .stage-sub { fill: #5b6573; font: 500 15px Inter, Arial, sans-serif; }
+      .arrow { stroke: #007985; stroke-width: 4; fill: none; marker-end: url(#bc-arrow); }
+      .loop { stroke: #8aa8ad; stroke-width: 3; stroke-dasharray: 8 8; fill: none; marker-end: url(#bc-arrow-muted); }
+      .chip { fill: #fff; stroke: #007985; stroke-width: 2; rx: 22; }
+      .chip-title { fill: #00565f; font: 850 24px Inter, Arial, sans-serif; }
+      .chip-kicker { fill: #00565f; font: 850 13px Inter, Arial, sans-serif; letter-spacing: 0.08em; }
+      .chip-sub { fill: #5b6573; font: 500 15px Inter, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="450"/>
+
+  <g transform="translate(75 34)">
+    <rect class="chip" x="0" y="0" width="450" height="112"/>
+    <text class="chip-kicker" x="28" y="32">SEARCH / RETRIEVAL</text>
+    <text class="chip-title" x="28" y="66">answer an expressed request</text>
+    <text class="chip-sub" x="28" y="91">rank results for this moment</text>
+
+    <rect class="chip" x="595" y="0" width="450" height="112"/>
+    <text class="chip-kicker" x="623" y="32">RECOMMENDATION / FILTERING</text>
+    <text class="chip-title" x="623" y="66">choose future exposure</text>
+    <text class="chip-sub" x="623" y="91">use stored interest as candidates arrive</text>
+  </g>
+
+  <g transform="translate(90 205)">
+    <rect class="stage" x="0" y="0" width="190" height="112"/>
+    <text class="stage-title" x="41" y="46">Represent</text>
+    <text class="stage-sub" x="52" y="75">need + item</text>
+
+    <path class="arrow" d="M 205 56 L 285 56"/>
+
+    <rect class="stage" x="300" y="0" width="190" height="112"/>
+    <text class="stage-title" x="350" y="46">Compare</text>
+    <text class="stage-sub" x="349" y="75">match / rank</text>
+
+    <path class="arrow" d="M 505 56 L 585 56"/>
+
+    <rect class="stage" x="600" y="0" width="190" height="112"/>
+    <text class="stage-title" x="650" y="46">Expose</text>
+    <text class="stage-sub" x="634" y="75">results / recs</text>
+
+    <path class="arrow" d="M 805 56 L 855 56"/>
+
+    <rect class="stage" x="870" y="0" width="220" height="112"/>
+    <text class="stage-title" x="980" y="42" text-anchor="middle">Learn / adapt</text>
+    <text class="stage-sub" x="980" y="68" text-anchor="middle">
+      <tspan x="980" dy="0">refine query</tspan>
+      <tspan x="980" dy="17">or update profile</tspan>
+    </text>
+
+    <path class="loop" d="M 980 124 C 850 205, 238 205, 95 124"/>
+  </g>
+</svg>

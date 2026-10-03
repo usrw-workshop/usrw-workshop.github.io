@@ -1,0 +1,115 @@
+.gems-slide {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr 1fr;
+  grid-template-areas:
+    "problem subspaces null"
+    "bottom bottom bottom";
+  gap: 20px;
+  align-items: stretch;
+}
+
+.gems-problem,
+.gems-null {
+  padding: 15px 17px;
+  border: 0;
+  background: transparent;
+}
+
+.gems-problem {
+  grid-area: problem;
+  padding: 6px;
+  background: transparent;
+}
+
+.gems-problem img {
+  display: block;
+  width: 100%;
+  height: 176px;
+  object-fit: contain;
+}
+
+.gems-null {
+  grid-area: null;
+}
+
+.gems-problem strong,
+.gems-null strong,
+.gems-problem small,
+.gems-null span,
+.gems-null small {
+  display: block;
+}
+
+.gems-problem strong,
+.gems-null strong {
+  margin: 8px 0;
+  font-size: 23px;
+  line-height: 1.08;
+}
+
+.gems-problem small,
+.gems-null span,
+.gems-null small {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.gems-null span {
+  margin-top: 7px;
+  padding: 6px 8px;
+  background: transparent;
+}
+
+.gems-null span b {
+  color: var(--fg);
+}
+
+.gems-null small {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+.gems-subspaces {
+  grid-area: subspaces;
+  display: grid;
+  gap: 8px;
+}
+
+.gems-subspaces span {
+  padding: 10px 12px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+}
+
+.gems-subspaces b,
+.gems-subspaces em {
+  display: block;
+}
+
+.gems-subspaces b {
+  color: var(--fg);
+  font-size: 16px;
+}
+
+.gems-subspaces em {
+  color: var(--muted);
+  font-size: 13px;
+  font-style: normal;
+}
+
+.gems-null {
+  border: 0;
+  border-radius: 28px;
+  background: linear-gradient(150deg, #e6f6ec, #f8fbf9);
+}
+
+.gems-bottom-line {
+  grid-area: bottom;
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 20px;
+  font-weight: 850;
+  text-align: center;
+}

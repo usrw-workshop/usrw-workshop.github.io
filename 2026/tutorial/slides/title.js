@@ -1,0 +1,42 @@
+(function () {
+  window.USRWDeck.registerSlide({
+    id: "title",
+    title: "Dive Deep",
+    layout: "title",
+    mode: "core",
+    modeLabel: "USRW 2026 · In-workshop tutorial",
+    role: "Unified Search and Recommendation",
+    showMeta: false,
+    html: [
+      "<div class=\"title-composition\">",
+      "  <div class=\"title-intro\">",
+      "    <p class=\"title-thesis\">Why search and recommendation are rapidly converging — and why they are still not simply the same task.</p>",
+      "    <div class=\"title-event\">",
+      "      <span>First Unified Search and Recommendation Workshop</span>",
+      "      <strong>ACM RecSys 2026 · 2 October · Minneapolis</strong>",
+      "    </div>",
+      "  </div>",
+      "  <div class=\"title-presenters\" aria-label=\"Tutorial presenters\">",
+      "    <figure class=\"title-presenter\">",
+      "      <span class=\"title-portrait title-portrait--aleksandr\">",
+      "        <img src=\"assets/media/images/aleksandr-petrov.jpg\" alt=\"Aleksandr V. Petrov\">",
+      "      </span>",
+      "      <figcaption>",
+      "        <strong>Aleksandr V. Petrov</strong>",
+      "        <span>Research Scientist · Spotify</span>",
+      "      </figcaption>",
+      "    </figure>",
+      "    <figure class=\"title-presenter\">",
+      "      <span class=\"title-portrait title-portrait--gustavo\">",
+      "        <img src=\"assets/media/images/gustavo-penha.png\" alt=\"Gustavo Penha\">",
+      "      </span>",
+      "      <figcaption>",
+      "        <strong>Gustavo Penha</strong>",
+      "        <span>Senior Research Scientist · Spotify</span>",
+      "      </figcaption>",
+      "    </figure>",
+      "  </div>",
+      "</div>"
+    ].join("")
+  });
+}());

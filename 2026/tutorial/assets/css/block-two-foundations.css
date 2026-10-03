@@ -1,0 +1,130 @@
+.content-foundations {
+  display: grid;
+  grid-template-rows: 260px 110px;
+  gap: 24px;
+  padding: 24px 48px 0;
+}
+
+.content-foundation-papers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 72px;
+}
+
+.content-paper {
+  min-width: 0;
+  transition: opacity 180ms ease;
+}
+
+.content-paper-year {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.content-paper h2 {
+  margin: 0 0 28px;
+  color: var(--accent-strong);
+  font-size: 34px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.content-paper-idea {
+  margin: 0;
+}
+
+.content-paper-idea strong,
+.content-paper-idea span {
+  display: block;
+}
+
+.content-paper-idea strong {
+  color: var(--fg);
+  font-size: 27px;
+  line-height: 1.15;
+}
+
+.content-paper-idea span {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.content-foundation-insight {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  column-gap: 14px;
+  align-self: start;
+}
+
+.content-insight-bulb {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 32px;
+  line-height: 1.15;
+}
+
+.content-foundation-insight > strong {
+  grid-column: 2;
+  display: block;
+  color: var(--accent-strong);
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.content-foundation-comparisons {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 72px;
+  margin-top: 16px;
+}
+
+.content-foundation-comparisons p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.content-foundation-comparisons strong,
+.content-foundation-comparisons span {
+  display: block;
+}
+
+.content-foundation-comparisons strong {
+  margin-bottom: 5px;
+  color: var(--fg);
+}
+
+.slide[data-slide-id="common-roots"][data-fragment-index="1"] .specificity-paper {
+  opacity: 0.35;
+}
+
+.slide[data-slide-id="common-roots"][data-fragment-index="2"] .content-paper {
+  opacity: 0.5;
+}
+
+.slide-block-two .content-foundations [data-fragment] {
+  transform: none;
+}
+
+.content-foundations [data-fragment]:not(.is-visible) {
+  visibility: hidden;
+}
+
+@media print {
+  .slide[data-slide-id="common-roots"] .content-paper {
+    opacity: 1 !important;
+  }
+
+  .content-foundations [data-fragment] {
+    visibility: visible !important;
+  }
+}

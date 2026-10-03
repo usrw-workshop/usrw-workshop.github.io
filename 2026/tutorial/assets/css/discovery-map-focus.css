@@ -1,0 +1,215 @@
+.discovery-map-focused {
+  --map-inputs: 0.35;
+  --map-models: 0.35;
+  --map-data: 0.35;
+  --map-results: 0.35;
+  --map-evaluation: 0.35;
+  --map-agent: 0.35;
+  --map-input-links: 0.2;
+  --map-result-links: 0.2;
+  --map-evaluation-links: 0.2;
+}
+
+.discovery-map-focused :is(.map-inputs, .map-heading-inputs) {
+  opacity: var(--map-inputs);
+}
+
+.discovery-map-focused :is(.map-models, .map-heading-models) {
+  opacity: var(--map-models);
+}
+
+.discovery-map-focused .map-data {
+  opacity: var(--map-data);
+}
+
+.discovery-map-focused :is(.map-results, .map-heading-results) {
+  opacity: var(--map-results);
+}
+
+.discovery-map-focused :is(.map-evaluations, .map-heading-evaluation) {
+  opacity: var(--map-evaluation);
+}
+
+.discovery-map-focused .map-orchestration {
+  opacity: var(--map-agent);
+}
+
+.discovery-map-focused .map-input-links {
+  opacity: var(--map-input-links);
+}
+
+.discovery-map-focused .map-result-links {
+  opacity: var(--map-result-links);
+}
+
+.discovery-map-focused .map-evaluation-links {
+  opacity: var(--map-evaluation-links);
+}
+
+.discovery-map-focused .map-models .map-node rect {
+  fill: #e0f5e6;
+}
+
+.discovery-map-focused .map-models .map-label {
+  fill: var(--accent-strong);
+}
+
+.discovery-map-focused .map-bridge .map-shared-field {
+  stroke: var(--accent-strong);
+  stroke-width: 1.5;
+}
+
+.discovery-map-focused .map-bridge .map-detail {
+  fill: var(--accent-strong);
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.discovery-map-focused .map-bridge .map-thread {
+  stroke: var(--accent-strong);
+  stroke-width: 2.5;
+}
+
+.discovery-map-focused[data-map-emphasis="matching"] {
+  --map-models: 1;
+  --map-inputs: 0.6;
+  --map-results: 0.5;
+  --map-input-links: 0.65;
+  --map-result-links: 0.65;
+}
+
+.discovery-map-focused[data-map-emphasis="representation"] {
+  --map-models: 1;
+  --map-inputs: 0.5;
+  --map-results: 0.45;
+  --map-input-links: 0.5;
+  --map-result-links: 0.5;
+}
+
+.discovery-map-focused[data-map-emphasis="representation"] .map-models > .map-node {
+  opacity: 0.65;
+}
+
+.discovery-map-focused[data-map-emphasis="divergence"] {
+  --map-models: 1;
+  --map-data: 0.6;
+  --map-input-links: 0.5;
+  --map-result-links: 0.45;
+}
+
+.discovery-map-focused[data-map-emphasis="reconnection"] {
+  --map-inputs: 1;
+  --map-models: 1;
+  --map-results: 0.45;
+  --map-input-links: 0.3;
+  --map-result-links: 0.35;
+}
+
+.discovery-map-focused[data-map-emphasis="reconnection"] .map-search-input {
+  opacity: 0.75;
+}
+
+.discovery-map-focused[data-map-emphasis="reconnection"] .map-recommendation-input {
+  opacity: 0.35;
+}
+
+.discovery-map-focused[data-map-emphasis="reconnection"] .map-search-model {
+  opacity: 0.5;
+}
+
+.discovery-map-focused[data-map-emphasis="reconnection"] .map-recommendation-model {
+  opacity: 0.8;
+}
+
+.discovery-map-focused .map-search-transfer .map-transfer {
+  stroke-width: 3.5;
+}
+
+.discovery-map-focused .map-search-transfer .map-transfer-label {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.discovery-map-focused[data-map-emphasis="data"] {
+  --map-data: 1;
+  --map-models: 0.45;
+}
+
+.discovery-map-focused:is([data-map-emphasis="data"], [data-map-emphasis="choices"]) .map-data .map-shared-field {
+  stroke: var(--accent-strong);
+  stroke-width: 2;
+}
+
+.discovery-map-focused:is([data-map-emphasis="data"], [data-map-emphasis="choices"]) .map-data-title {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.discovery-map-focused[data-map-emphasis="data"] .map-data-link {
+  stroke: var(--accent-strong);
+  stroke-width: 2.5;
+}
+
+.discovery-map-focused:is([data-map-emphasis="models"], [data-map-emphasis="generation"]) {
+  --map-models: 1;
+  --map-inputs: 0.5;
+  --map-results: 0.5;
+  --map-input-links: 0.65;
+  --map-result-links: 0.65;
+}
+
+.discovery-map-focused:is([data-map-emphasis="models"], [data-map-emphasis="generation"]) .map-models > .map-focus > .map-shared-field {
+  stroke: var(--accent-strong);
+  stroke-width: 2;
+}
+
+.discovery-map-focused[data-map-emphasis="models"] .map-shared .map-label {
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.discovery-map-focused[data-map-emphasis="orchestration"] {
+  --map-agent: 1;
+  --map-models: 0.65;
+  --map-results: 0.65;
+  --map-inputs: 0.45;
+  --map-input-links: 0.45;
+  --map-result-links: 0.65;
+}
+
+.discovery-map-focused:is([data-map-emphasis="orchestration"], [data-map-emphasis="choices"]) .map-agent-field {
+  stroke-width: 3;
+}
+
+.discovery-map-focused:is([data-map-emphasis="orchestration"], [data-map-emphasis="choices"]) .map-agent-label {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.discovery-map-focused[data-map-emphasis="evaluation"] {
+  --map-evaluation: 1;
+  --map-results: 0.55;
+  --map-evaluation-links: 1;
+}
+
+.discovery-map-focused:is([data-map-emphasis="evaluation"], [data-map-emphasis="choices"]) .map-evaluation-field {
+  stroke: #b18b32;
+  stroke-width: 2;
+}
+
+.discovery-map-focused:is([data-map-emphasis="evaluation"], [data-map-emphasis="choices"]) .map-evaluations .map-label {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.discovery-map-focused[data-map-emphasis="choices"] {
+  --map-models: 1;
+  --map-data: 1;
+  --map-agent: 1;
+  --map-evaluation: 1;
+  --map-inputs: 0.55;
+  --map-results: 0.55;
+  --map-input-links: 0.45;
+  --map-result-links: 0.45;
+  --map-evaluation-links: 0.45;
+}

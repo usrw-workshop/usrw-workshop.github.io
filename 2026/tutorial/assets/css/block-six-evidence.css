@@ -1,0 +1,128 @@
+.model-primers {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 10px;
+  padding: 0 17px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.model-primers strong,
+.model-primers span {
+  display: block;
+}
+
+.model-primers strong {
+  margin: 3px 0;
+  font-size: 15px;
+}
+
+.model-primers div > span:last-child {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.transfer-cases {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.transfer-case {
+  min-height: 166px;
+  padding: 10px 17px;
+  border: 0;
+  background: transparent;
+}
+
+.transfer-case.is-positive {
+  --case-accent: #198754;
+}
+
+.transfer-case.is-negative {
+  --case-accent: #b23a48;
+}
+
+.transfer-case.is-warning {
+  --case-accent: #be7b00;
+}
+
+.transfer-case::before {
+  display: block;
+  width: 32px;
+  height: 5px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  background: var(--case-accent);
+  content: "";
+}
+
+.case-label {
+  display: block;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.transfer-case > strong {
+  display: block;
+  min-height: 43px;
+  margin: 7px 0 9px;
+  font-size: 19px;
+  line-height: 1.12;
+}
+
+.metric-single {
+  color: var(--accent-strong);
+  font-size: 27px;
+  font-weight: 850;
+}
+
+.metric-single em {
+  color: var(--muted);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.metric-qualitative b,
+.metric-qualitative span {
+  display: block;
+}
+
+.metric-qualitative b {
+  color: var(--accent-strong);
+  font-size: 20px;
+}
+
+.metric-qualitative span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.transfer-case small {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.transfer-rule {
+  margin-top: 7px;
+  padding: 11px 17px 9px;
+  border-top: 1px solid var(--line);
+}
+
+.transfer-rule strong {
+  display: block;
+  margin-top: 3px;
+  color: var(--accent-strong);
+  font-size: 20px;
+  line-height: 1.15;
+}

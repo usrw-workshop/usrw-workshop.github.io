@@ -1,0 +1,135 @@
+.grounded-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.grounded-flow article {
+  position: relative;
+  min-height: 145px;
+  padding: 17px 16px;
+  border: 1px solid var(--line);
+  background: #fbfcfc;
+}
+
+.grounded-flow article:nth-child(2) {
+  border-top: 5px solid #be7b00;
+  background: #fff8ea;
+}
+
+.grounded-flow article:nth-child(3) {
+  border: 2px solid var(--accent);
+  background: #eef7f7;
+}
+
+.grounded-flow article::after {
+  position: absolute;
+  right: -21px;
+  top: 50%;
+  z-index: 2;
+  color: var(--accent);
+  content: "→";
+  font-size: 24px;
+  font-weight: 900;
+  transform: translateY(-50%);
+}
+
+.grounded-flow article:last-child::after {
+  content: none;
+}
+
+.ground-step {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.grounded-flow strong,
+.grounded-flow small {
+  display: block;
+}
+
+.grounded-flow strong {
+  margin: 17px 0 8px;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.grounded-flow small {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.28;
+}
+
+.grounding-ablation {
+  display: grid;
+  grid-template-columns: 1fr 22px 1fr 22px 1fr 22px 1fr;
+  gap: 5px;
+  align-items: center;
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: #f2f7f7;
+}
+
+.grounding-ablation span {
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.grounding-ablation b {
+  display: block;
+  color: var(--accent-strong);
+  font-size: 22px;
+}
+
+.grounding-ablation i {
+  color: var(--accent);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
+}
+
+.grounded-boundaries {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  margin-top: 14px;
+}
+
+.grounded-boundaries span {
+  padding: 13px 15px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.28;
+}
+
+.grounded-boundaries strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--fg);
+  font-size: 17px;
+}
+
+.grounded-boundaries .is-evidence {
+  border: 2px solid var(--accent);
+  background: #eef7f7;
+}
+
+.grounded-boundaries .is-boundary {
+  border: 1px solid var(--line);
+  background: #fff8ea;
+}
+
+.grounded-close {
+  margin: 12px 0 0;
+  color: var(--accent-strong);
+  font-size: 20px;
+  font-weight: 850;
+  text-align: center;
+}

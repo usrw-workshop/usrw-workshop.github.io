@@ -1,0 +1,149 @@
+.divergence-agenda-slide {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 184px 120px 70px;
+  gap: 16px 72px;
+  padding: 24px 48px 0;
+}
+
+.agenda-milestone,
+.agenda-program {
+  min-width: 0;
+  transition: opacity 180ms ease;
+}
+
+.agenda-year {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.agenda-milestone h2 {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 34px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.agenda-milestone p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.agenda-milestone .agenda-data {
+  max-width: 440px;
+  margin-top: 16px;
+  color: var(--fg);
+  font-size: 25px;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.agenda-milestone .agenda-contrast {
+  color: var(--accent-strong);
+  font-size: 19px;
+}
+
+.agenda-program,
+.agenda-transition {
+  grid-column: 1 / -1;
+  align-self: start;
+}
+
+.agenda-program h2 {
+  margin: 0;
+  color: var(--fg);
+  font-size: 27px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.agenda-advances {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 72px;
+  margin-top: 16px;
+}
+
+.agenda-advances p {
+  margin: 0;
+}
+
+.agenda-advances strong {
+  display: block;
+  color: var(--accent-strong);
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+.agenda-advances span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.agenda-transition > strong {
+  display: block;
+  color: var(--accent-strong);
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.agenda-transition p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.slide[data-slide-id="block-3-latent-factors"]:is([data-fragment-index="1"], [data-fragment-index="2"]) .agenda-netflix,
+.slide[data-slide-id="block-3-latent-factors"][data-fragment-index="2"] .agenda-conference {
+  opacity: 0.35;
+}
+
+.slide[data-slide-id="block-3-latent-factors"][data-fragment-index="3"] :is(.agenda-milestone, .agenda-program) {
+  opacity: 0.5;
+}
+
+.slide-block-three .divergence-agenda-slide [data-fragment] {
+  transform: none;
+}
+
+.divergence-agenda-slide [data-fragment]:not(.is-visible) {
+  visibility: hidden;
+}
+
+.slide[data-slide-id="block-3-latent-factors"] .slide-citations {
+  right: 180px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+}
+
+/* Retain the shared label typography used by the evaluation slide. */
+.history-label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--accent-strong);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media print {
+  .slide[data-slide-id="block-3-latent-factors"] :is(.agenda-milestone, .agenda-program) {
+    opacity: 1 !important;
+  }
+
+  .divergence-agenda-slide [data-fragment] {
+    visibility: visible !important;
+  }
+}

@@ -1,0 +1,122 @@
+.belkin-contract-slide {
+  display: grid;
+  gap: 12px;
+}
+
+[data-slide-id="block-1-belkin-croft-contract"] h1 {
+  max-width: 1100px;
+  color: var(--accent-strong);
+  font-size: clamp(34px, 3.75vw, 47px);
+  white-space: nowrap;
+}
+
+.belkin-diagram-frame {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 8px 10px 4px;
+}
+
+.belkin-contract-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Keep SVG text aligned when the surrounding canvas changes scale. */
+  text-rendering: geometricPrecision;
+}
+
+.belkin-contract-diagram .bc-bg {
+  fill: #fff;
+}
+
+.belkin-contract-diagram .bc-stage {
+  fill: #f4f9fa;
+  stroke: #bfd5da;
+  stroke-width: 2;
+  rx: 22;
+}
+
+.belkin-contract-diagram .bc-stage-title,
+.belkin-contract-diagram .bc-chip-title,
+.belkin-contract-diagram .bc-chip-kicker {
+  fill: #00565f;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 850;
+}
+
+.belkin-contract-diagram .bc-stage-title {
+  font-size: 25px;
+}
+
+.belkin-contract-diagram .bc-stage-sub,
+.belkin-contract-diagram .bc-chip-sub {
+  fill: #5b6573;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.belkin-contract-diagram .bc-arrow {
+  fill: none;
+  marker-end: url("#bc-arrow");
+  stroke: #007985;
+  stroke-width: 4;
+}
+
+.belkin-contract-diagram .bc-loop {
+  fill: none;
+  marker-end: url("#bc-arrow-muted");
+  stroke: #8aa8ad;
+  stroke-dasharray: 8 8;
+  stroke-width: 3;
+}
+
+.belkin-contract-diagram .bc-marker {
+  fill: #007985;
+}
+
+.belkin-contract-diagram .bc-marker-muted {
+  fill: #8aa8ad;
+}
+
+.belkin-contract-diagram .bc-chip {
+  fill: #fff;
+  rx: 22;
+  stroke: #007985;
+  stroke-width: 2;
+}
+
+.belkin-contract-diagram .bc-chip-title {
+  font-size: 24px;
+}
+
+.belkin-contract-diagram .bc-chip-kicker {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.belkin-contract-diagram [data-fragment] {
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.belkin-contract-diagram [data-fragment].is-visible {
+  opacity: 1;
+}
+
+.belkin-source-note {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .belkin-contract-diagram [data-fragment] {
+    transition: none;
+  }
+}
+
+@media print {
+  .belkin-contract-diagram [data-fragment] {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,50 @@
+.history-line {
+  align-self: start;
+  max-width: 1040px;
+  color: var(--muted);
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.history-line p {
+  margin: 12px 0 0;
+}
+
+.history-line strong {
+  color: var(--accent-strong);
+  font-weight: 650;
+}
+
+.history-line[data-fragment] {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.history-line[data-fragment].is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.term-label {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .history-line[data-fragment] {
+    transition: none;
+  }
+}
+
+@media print {
+  .history-line[data-fragment] {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}

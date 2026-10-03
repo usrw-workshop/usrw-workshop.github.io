@@ -134,6 +134,26 @@
   font-weight: 600;
 }
 
+.tutorial-slides {
+  margin: 1.2rem 0 0;
+}
+
+.tutorial-slides a {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tutorial-slides a:hover,
+.tutorial-slides a:focus-visible {
+  background: #163b67;
+  text-decoration: underline;
+}
+
 @media (max-width: 600px) {
   .tutorial-summary,
   .tutorial-presenters,

@@ -1,0 +1,132 @@
+.logged-path-slide {
+  display: grid;
+  grid-template-rows: 242px 66px 45px 42px;
+  gap: 10px;
+  min-height: 425px;
+  padding: 4px 54px 0;
+}
+
+.event-trace {
+  margin: 0;
+}
+
+.event-trace figcaption {
+  margin-bottom: 7px;
+  color: var(--accent-strong);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+}
+
+.event-trace table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.event-trace th,
+.event-trace td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+.event-trace th {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.event-trace td {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.event-trace th:nth-child(1),
+.event-trace td:nth-child(1) {
+  width: 14%;
+  font-family: var(--mono);
+}
+
+.event-trace th:nth-child(2),
+.event-trace td:nth-child(2) {
+  width: 20%;
+}
+
+.event-trace th:nth-child(3),
+.event-trace td:nth-child(3) {
+  width: 35%;
+}
+
+.event-trace td strong {
+  color: var(--fg);
+}
+
+.event-trace > small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.kuaisar-scale {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+.kuaisar-scale p {
+  margin: 0;
+  padding: 8px 18px;
+  text-align: center;
+}
+
+.kuaisar-scale p + p {
+  border-left: 1px solid var(--line);
+}
+
+.kuaisar-scale strong,
+.kuaisar-scale span {
+  display: block;
+}
+
+.kuaisar-scale strong {
+  color: var(--accent-strong);
+  font-size: 20px;
+}
+
+.kuaisar-scale span {
+  margin-top: 1px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.dataset-boundary,
+.block-six-question {
+  margin: 0;
+  text-align: center;
+}
+
+.dataset-boundary {
+  align-self: center;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.dataset-boundary strong,
+.block-six-question strong {
+  color: var(--accent-strong);
+}
+
+.dataset-boundary span {
+  margin-left: 12px;
+}
+
+.block-six-question {
+  align-self: end;
+  color: var(--fg);
+  font-size: 19px;
+  font-weight: 750;
+}

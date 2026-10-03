@@ -1,0 +1,45 @@
+.paper-plan-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.paper-plan-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 14px;
+  padding: 4px 0;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.18;
+}
+
+.paper-plan-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.paper-title {
+  font-weight: 750;
+}
+
+.paper-by,
+.paper-status {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.82em;
+  font-weight: 500;
+}
+
+.paper-status {
+  display: inline-block;
+  padding: 2px 7px;
+  border: 1px solid color-mix(in srgb, var(--extension) 45%, var(--line));
+  border-radius: 999px;
+  color: var(--extension);
+  background: rgba(255, 230, 160, 0.32);
+}
+
+.paper-why {
+  color: var(--muted);
+}

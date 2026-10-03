@@ -1,0 +1,168 @@
+.slide-block-nine h1,
+.slide-block-nine .slide-role {
+  max-width: 1160px;
+}
+
+.slide-block-nine .slide-content {
+  margin-top: 16px;
+}
+
+.evaluation-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.evaluation-column {
+  display: grid;
+  grid-template-rows: 130px auto;
+  gap: 12px;
+}
+
+.evaluation-column article {
+  padding: 17px 20px;
+  border: 0;
+  background: transparent;
+}
+
+.evaluation-pool {
+  color: var(--accent-strong);
+}
+
+.evaluation-column article strong,
+.evaluation-column article p {
+  display: block;
+}
+
+.evaluation-column article strong {
+  margin: 11px 0 8px;
+  font-size: 22px;
+  line-height: 1.12;
+}
+
+.evaluation-column article p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.evaluation-method {
+  padding: 14px 17px;
+  border-top: 1px solid var(--line);
+  background: transparent;
+}
+
+.evaluation-method.is-cranfield {
+  border-color: var(--line);
+  background: transparent;
+}
+
+.evaluation-method > strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.history-strip,
+.pool-flow {
+  display: grid;
+  gap: 6px;
+}
+
+.history-strip b,
+.history-strip i,
+.pool-flow span,
+.pool-flow b,
+.pool-flow i {
+  padding: 8px 7px;
+  border: 0;
+  border-radius: 999px;
+  background: #f3f6f4;
+  font-size: 11px;
+  font-style: normal;
+  text-align: center;
+}
+
+.history-strip b {
+  background: #fff1d7;
+}
+
+.history-strip i {
+  border: 1px dashed #be7b00;
+  background: transparent;
+}
+
+.history-label {
+  margin-bottom: 5px;
+  padding: 4px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 10px;
+  text-align: center;
+}
+
+.history-strip {
+  grid-template-columns: 2fr 1fr;
+}
+
+.history-time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.history-time strong {
+  color: #be7b00;
+  font-size: 10px;
+}
+
+.pool-flow {
+  grid-template-columns: repeat(3, .75fr) 1.1fr 1.1fr;
+}
+
+.pool-flow b,
+.pool-flow i {
+  background: #e6f6ec;
+}
+
+.pool-flow b::before,
+.pool-flow i::before {
+  content: "→ ";
+  color: var(--accent);
+}
+
+.evaluation-method p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.evaluation-source-note {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: right;
+}
+
+.slide-block-nine [data-fragment] {
+  opacity: 0;
+  transform: translateY(7px);
+  transition: opacity 150ms ease, transform 180ms ease;
+}
+
+.slide-block-nine [data-fragment].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media print {
+  .slide-block-nine [data-fragment] {
+    opacity: 1;
+    transform: none;
+  }
+}

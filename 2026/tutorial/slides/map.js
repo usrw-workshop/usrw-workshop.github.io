@@ -1,0 +1,42 @@
+(function () {
+  window.USRWDeck.registerSlide({
+    id: "map",
+    title: "Tutorial outline",
+    layout: "opening",
+    mode: "core",
+    modeLabel: "Tutorial map",
+    duration: "03:30-05:00",
+    status: "DRAFT",
+    showMeta: false,
+    role: "Blocks 1–5 cover shared roots, divergence, and reconnection. Blocks 6–9 cover modern unification approaches and evaluation.",
+    html: [
+      "<div class=\"speaker-routes\">",
+      "  <section class=\"speaker-route\" aria-label=\"Aleksandr V. Petrov presents Blocks 1 through 5\">",
+      "    <figure class=\"route-speaker\">",
+      "      <img class=\"route-portrait route-portrait-aleksandr\" src=\"assets/media/images/aleksandr-petrov.jpg\" alt=\"\">",
+      "      <figcaption><strong>Aleksandr V. Petrov</strong><span>Blocks 1–5</span></figcaption>",
+      "    </figure>",
+      "    <ol class=\"speaker-blocks speaker-blocks-five\" data-fragment>",
+      "      <li><span>1</span><strong>Shared machinery</strong></li>",
+      "      <li><span>2</span><strong>Content representations</strong></li>",
+      "      <li><span>3</span><strong>Divergence</strong></li>",
+      "      <li><span>4</span><strong>Reconnection</strong></li>",
+      "      <li><span>5</span><strong>Shared behavior</strong></li>",
+      "    </ol>",
+      "  </section>",
+      "  <section class=\"speaker-route\" aria-label=\"Gustavo Penha presents Blocks 6 through 9\">",
+      "    <figure class=\"route-speaker\">",
+      "      <img class=\"route-portrait route-portrait-gustavo\" src=\"assets/media/images/gustavo-penha.png\" alt=\"\">",
+      "      <figcaption><strong>Gustavo Penha</strong><span>Blocks 6–9</span></figcaption>",
+      "    </figure>",
+      "    <ol class=\"speaker-blocks speaker-blocks-four\" data-fragment>",
+      "      <li><span>6</span><strong>Selective joint modeling</strong></li>",
+      "      <li><span>7</span><strong>Generative retrieval</strong></li>",
+      "      <li><span>8</span><strong>Agentic discovery</strong></li>",
+      "      <li><span>9</span><strong>Evaluation unification</strong></li>",
+      "    </ol>",
+      "  </section>",
+      "</div>"
+    ].join("")
+  });
+}());

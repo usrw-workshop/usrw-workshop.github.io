@@ -1,0 +1,86 @@
+.paper-mini-diagram {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3px 5px;
+  margin-top: 5px;
+  padding-top: 7px;
+  color: var(--accent-strong);
+  font-family: var(--mono);
+  font-size: 7px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.paper-mini-diagram::before,
+.paper-mini-diagram::after {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 7px;
+  border: solid var(--accent);
+  border-width: 0 1px 1px;
+  content: "";
+  opacity: 0.75;
+}
+
+.paper-mini-diagram b,
+.paper-mini-diagram i {
+  display: block;
+  padding: 3px 3px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  font-style: normal;
+}
+
+.paper-mini-diagram b {
+  grid-column: 1 / -1;
+  border-color: var(--accent);
+  background: #eef7f7;
+}
+
+.paper-mini-diagram i {
+  background: transparent;
+}
+
+.diagram-split,
+.diagram-gated,
+.diagram-fanout {
+  grid-template-columns: 0.8fr 1.2fr 0.8fr;
+}
+
+.diagram-split b,
+.diagram-gated b,
+.diagram-fanout b {
+  grid-column: auto;
+}
+
+.diagram-split b {
+  order: 2;
+}
+
+.diagram-split i:first-of-type {
+  order: 1;
+}
+
+.diagram-split i:last-of-type {
+  order: 3;
+}
+
+.diagram-split::before,
+.diagram-gated::before,
+.diagram-fanout::before {
+  left: 20%;
+  width: 60%;
+}
+
+.diagram-split::after,
+.diagram-gated::after,
+.diagram-fanout::after {
+  display: none;
+}

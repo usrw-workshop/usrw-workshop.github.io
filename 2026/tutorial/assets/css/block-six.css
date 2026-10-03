@@ -1,0 +1,126 @@
+.slide-block-six h1,
+.slide-block-six .slide-role {
+  max-width: 1120px;
+}
+
+.slide-block-six .slide-content {
+  margin-top: 12px;
+}
+
+.joint-seams-slide,
+.transfer-evidence-slide {
+  min-height: 410px;
+}
+
+.joint-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.seam-input {
+  padding: 13px 16px;
+  border: 0;
+  background: transparent;
+  text-align: center;
+}
+
+.seam-input strong,
+.seam-input span {
+  display: block;
+}
+
+.seam-input strong {
+  margin: 4px 0;
+  font-size: 22px;
+}
+
+.seam-input > span:last-child {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.joint-down-arrow {
+  height: 25px;
+  color: var(--accent);
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 25px;
+  text-align: center;
+}
+
+.shared-backbone,
+.task-specific-components {
+  padding: 15px 22px;
+  border: 0;
+  border-radius: 48px;
+  background: linear-gradient(100deg, #f6faf7, #e6f6ec, #f6faf7);
+  text-align: center;
+}
+
+.shared-backbone > strong,
+.task-specific-components > strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--accent-strong);
+  font-size: 23px;
+  line-height: 1.16;
+}
+
+.task-specific-components {
+  margin-top: 18px;
+  background: linear-gradient(100deg, #fcfaf6, #fff1d7, #fcfaf6);
+}
+
+.task-specific-components > strong,
+.task-specific-components > .concept-label {
+  color: #805100;
+}
+
+.task-seams {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.task-seams div {
+  padding: 11px 13px;
+  border: 0;
+  background: transparent;
+  text-align: center;
+}
+
+.task-seams strong,
+.task-seams span {
+  display: block;
+}
+
+.task-seams strong {
+  font-size: 17px;
+}
+
+.task-seams span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.slide-block-six [data-fragment] {
+  opacity: 0;
+  transform: translateY(7px);
+  transition: opacity 150ms ease, transform 180ms ease;
+}
+
+.slide-block-six [data-fragment].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media print {
+  .slide-block-six [data-fragment] {
+    opacity: 1;
+    transform: none;
+  }
+}

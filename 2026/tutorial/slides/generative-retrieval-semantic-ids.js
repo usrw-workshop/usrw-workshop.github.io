@@ -1,0 +1,41 @@
+(function () {
+  window.USRWDeck.registerSlide({
+    id: "generative-retrieval-semantic-ids",
+    title: "An LLM gives both tasks the same output: generative retrieval and recommendation",
+    layout: "block-seven",
+    mode: "core",
+    modeLabel: "Block 7 · Generative retrieval",
+    status: "DRAFT",
+    showMeta: false,
+    role: "Queries and histories can both decode catalogue identifiers—without becoming the same task.",
+    citations: ["tay2022dsi", "rajput2023tiger", "penha2024bridging"],
+    html: [
+      "<div class=\"generative-protocol-slide\">",
+      "  <div class=\"protocol-progression\">",
+      "    <article class=\"protocol-card\" data-fragment>",
+      "      <span class=\"protocol-year\">2022 · search</span>",
+      "      <strong>query</strong><span class=\"protocol-model\">LLM</span><span class=\"protocol-arrow\">↓</span><b>document-ID</b>",
+      "      <small>DSI: model memory as an index <sup class=\"citation-marker\" data-cite=\"tay2022dsi\"></sup></small>",
+      "    </article>",
+      "    <div class=\"progression-arrow\" aria-hidden=\"true\">→</div>",
+      "    <article class=\"protocol-card\" data-fragment>",
+      "      <span class=\"protocol-year\">2023 · recommendation</span>",
+      "      <strong>behavior history</strong><span class=\"protocol-model\">LLM</span><span class=\"protocol-arrow\">↓</span><b>semantic item-ID sequence</b>",
+      "      <small>TIGER: recommendation as generative retrieval <sup class=\"citation-marker\" data-cite=\"rajput2023tiger\"></sup></small>",
+      "    </article>",
+      "    <div class=\"progression-arrow\" aria-hidden=\"true\">→</div>",
+      "    <article class=\"protocol-card is-joint\" data-fragment data-fragment-group=\"joint-training\">",
+      "      <span class=\"protocol-year\">2024 · joint training</span>",
+      "      <strong>query <em>or</em> history</strong><span class=\"protocol-model\">LLM</span><span class=\"protocol-arrow\">↓</span><b>shared atomic item token</b>",
+      "      <small>one model; two supervision streams <sup class=\"citation-marker\" data-cite=\"penha2024bridging\"></sup></small>",
+      "    </article>",
+      "  </div>",
+      "  <div class=\"protocol-signal-split\" data-fragment data-fragment-group=\"joint-training\">",
+      "    <span><strong>search teaches</strong> content</span>",
+      "    <span><strong>recommendation teaches</strong> co-occurrences</span>",
+      "  </div>",
+      "  <p class=\"protocol-bottom-line\" data-fragment data-fragment-group=\"joint-training\">A common LLM creates a bridge, and shared identifiers decide what crosses it.</p>",
+      "</div>"
+    ].join("")
+  });
+}());

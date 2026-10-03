@@ -1,0 +1,61 @@
+.slide-citations {
+  position: absolute;
+  left: 46px;
+  right: 330px;
+  bottom: 15px;
+  display: grid;
+  gap: 2px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.citation-link {
+  color: var(--accent-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.citation-item {
+  color: var(--accent-strong);
+}
+
+.citation-number {
+  color: var(--accent-strong);
+  font-family: var(--mono);
+  font-weight: 800;
+}
+
+.citation-marker {
+  margin-left: 0.12em;
+  color: var(--accent-strong);
+  font-family: var(--mono);
+  font-size: 0.36em;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.citation-title {
+  font-style: italic;
+}
+
+.reference-list {
+  margin-top: 16px;
+  padding-left: 24px;
+}
+
+.reference-list li {
+  margin: 12px 0;
+  font-size: 17px;
+}
+
+.reference-title {
+  font-weight: 700;
+}
+
+.reference-detail,
+.reference-doi {
+  color: var(--muted);
+}
