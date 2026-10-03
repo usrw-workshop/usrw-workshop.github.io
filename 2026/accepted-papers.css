@@ -28,6 +28,14 @@
   color: var(--color-muted);
 }
 
+.paper-honour {
+  color: #795a11;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
 .paper-card h2 {
   border: 0;
   font-size: 1.08rem;

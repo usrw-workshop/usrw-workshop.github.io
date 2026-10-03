@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const count = document.querySelector("[data-paper-count]");
   const papers = window.ACCEPTED_PAPERS || [];
   const sessions = window.PAPER_SESSIONS || {};
+  const honours = {
+    164: "Best Paper Award",
+    208: "Honorable Mention / Runner-up",
+    206: "Best Paper Shortlist",
+  };
 
   if (count) count.textContent = papers.length;
 
@@ -16,6 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
     session.textContent = sessions[paper.id] || "Poster";
     session.dataset.session = session.textContent;
     article.appendChild(session);
+
+    if (honours[paper.id]) {
+      const honour = document.createElement("p");
+      honour.className = "paper-honour";
+      honour.textContent = honours[paper.id];
+      article.appendChild(honour);
+    }
 
     const heading = document.createElement("h2");
     if (paper.pdf) {

@@ -1,0 +1,39 @@
+.honours-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.honour {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.honour--winner {
+  border-color: #c8a755;
+  background: #fffbf0;
+}
+
+.honour-label {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.honour--winner .honour-label { color: #795a11; }
+
+.honour h3 {
+  line-height: 1.4;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.honour-authors { font-weight: 600; }
+
+.honour-affiliation {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.honour-certificate { margin: 0.7rem 0 0; }
