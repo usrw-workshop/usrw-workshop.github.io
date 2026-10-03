@@ -134,11 +134,11 @@
   font-weight: 600;
 }
 
-.tutorial-slides {
+.slides-link {
   margin: 1.2rem 0 0;
 }
 
-.tutorial-slides a {
+.slides-link a {
   display: inline-block;
   padding: 0.7rem 1rem;
   border-radius: 6px;
@@ -148,8 +148,8 @@
   text-decoration: none;
 }
 
-.tutorial-slides a:hover,
-.tutorial-slides a:focus-visible {
+.slides-link a:hover,
+.slides-link a:focus-visible {
   background: #163b67;
   text-decoration: underline;
 }
