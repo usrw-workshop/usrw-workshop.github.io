@@ -2,6 +2,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const programme = document.querySelector("#programme");
   if (!programme) return;
 
+  const disclosure = programme.querySelector(".programme-disclosure");
+  const expandProgramme = () => {
+    disclosure.open = true;
+  };
+  const revealHashTarget = () => {
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (target && programme.contains(target)) {
+      expandProgramme();
+      target.scrollIntoView();
+    }
+  };
+  document.querySelectorAll('a[href="#programme"]').forEach((link) => {
+    link.addEventListener("click", expandProgramme);
+  });
+  window.addEventListener("hashchange", revealHashTarget);
+  revealHashTarget();
+
   const posterList = programme.querySelector("[data-render='poster-papers']");
   const sessions = window.PAPER_SESSIONS || {};
   const posters = (window.ACCEPTED_PAPERS || [])
